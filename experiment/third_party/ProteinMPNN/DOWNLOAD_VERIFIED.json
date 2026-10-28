@@ -1,0 +1,30 @@
+{
+  "repository": "https://github.com/dauparas/ProteinMPNN",
+  "revision": "8907e6671bfbfc92303b5f79c4b5e6ce47cdef57",
+  "files": [
+    {
+      "file": "protein_mpnn_utils.py",
+      "bytes": 63491,
+      "sha256": "74c8f9b7553422a7a0bbd705874844ee103c8926c2c96f154a87e0b824071e1b",
+      "url": "https://raw.githubusercontent.com/dauparas/ProteinMPNN/8907e6671bfbfc92303b5f79c4b5e6ce47cdef57/protein_mpnn_utils.py"
+    },
+    {
+      "file": "protein_mpnn_run.py",
+      "bytes": 29312,
+      "sha256": "61f2c519a7f73fa12da9eb90da97b97ec2f8d5f31d42605639c7600cbd321cbe",
+      "url": "https://raw.githubusercontent.com/dauparas/ProteinMPNN/8907e6671bfbfc92303b5f79c4b5e6ce47cdef57/protein_mpnn_run.py"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 1072,
+      "sha256": "82009d25ce585631f452b2b24589bdb29c559ccfefa2f200ef312ed5b501a586",
+      "url": "https://raw.githubusercontent.com/dauparas/ProteinMPNN/8907e6671bfbfc92303b5f79c4b5e6ce47cdef57/LICENSE"
+    },
+    {
+      "file": "vanilla_model_weights/v_48_020.pt",
+      "bytes": 6681301,
+      "sha256": "c9cb4a671d79604111231f8dbfc7c590e06f1197453b7a6854ac6661a642f5bd",
+      "url": "https://raw.githubusercontent.com/dauparas/ProteinMPNN/8907e6671bfbfc92303b5f79c4b5e6ce47cdef57/vanilla_model_weights/v_48_020.pt"
+    }
+  ]
+}

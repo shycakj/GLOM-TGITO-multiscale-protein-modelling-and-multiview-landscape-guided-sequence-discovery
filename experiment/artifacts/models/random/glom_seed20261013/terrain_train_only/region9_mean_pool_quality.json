@@ -1,0 +1,11 @@
+{
+  "source": "region9_mean_pool",
+  "calibration_auc": 0.9114692587230774,
+  "calibration_ap": 0.24589679732668454,
+  "calibration_top60_high435": 0.31666666666666665,
+  "source_quality": 0.7330284811061542,
+  "memory_n": 22003,
+  "calibration_n": 3143,
+  "test_labels_read": false,
+  "quality_features_use_query_true_label": false
+}

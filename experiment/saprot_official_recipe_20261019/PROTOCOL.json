@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-19",
+  "name": "saprot_official_recipe_20261019",
+  "user_clarification": "No externally task-fine-tuned checkpoint. Use general pretrained SaProt and train only on original project training partitions.",
+  "base_repo": "westlake-repl/SaProt_650M_AF2",
+  "base_revision": "d9b9ad00ef61c0990e611b2b43f2231c7de24b38",
+  "base_weight_sha256": "513c39088804b74309d961174d5fc7aeabfb9b79d2814cdc7e465d4fe4b9f216",
+  "external_fluorescence_or_eyfp_adapters_used": false,
+  "official_source_repo": "westlake-repl/SaprotHub",
+  "official_source_revision": "bd45778eaf7aa197f6becd524af120ba980f6df9",
+  "head": "Native CLS, Dropout, Linear(1280,1280), tanh, Dropout, Linear(1280,1); random task-head initialization",
+  "lora": {
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.0,
+    "targets": [
+      "query",
+      "key",
+      "value",
+      "intermediate.dense",
+      "output.dense"
+    ]
+  },
+  "input_modes": {
+    "aa": "All structure positions masked with #, matching official fluorescence task input",
+    "pred3di": "Existing frozen ESM2/Bridge predicted 3Di, identical to current native SaProt controls"
+  },
+  "splits": [
+    "random",
+    "depth"
+  ],
+  "seeds": [
+    20261013,
+    20261014,
+    20261015
+  ],
+  "data_hashes": {
+    "calibration.csv": "02e2e41bf0a86d8c6d3f80538b9d33b873b72a0c39f2dd5e488b55792309fcb0",
+    "depth_extrapolation.csv": "d11e84f90f644721a9030e340a149554be35be51f7a844a55db0ab4a5ca9657b",
+    "test.csv": "c7712cc892062c6a0826ce1ac6e1a8a9484c65c3e487104a3634d1e8306933e4",
+    "train.csv": "b446cf405d392322a80037245b8c303b8e3cad4ab24e3b30d94a2f434cdf5d3c",
+    "unique_sequences.csv": "46ba8dd4e1674e00f08e6c6ca0961cd1959198c7f90011b4f7ebcbcada0e5611",
+    "validation.csv": "b360b42002f8cde23f9c10118a16af15cee72488b3fe23ff2eff7b51362d47d1"
+  },
+  "training": {
+    "loss": "MSE on original target log-brightness",
+    "lr": 0.0001,
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "weight_decay": 0.01,
+    "effective_batch": 64,
+    "max_epochs": 25,
+    "patience": 6,
+    "scheduler": "cosine to 5% initial learning rate",
+    "gradient_clip": 1.0,
+    "precision": "bf16 autocast; FP32 master weights"
+  },
+  "selection": "minimum validation MSE, matching official regression selection rule",
+  "adaptations_from_model_card": "25-epoch cap and patience 6 to match existing local SaProt compute budget; bf16 instead of fp16; original data partitions and seeds",
+  "test_policy": "Test predictions made only after validation checkpoint selection; no test feedback",
+  "metrics": [
+    "rmse",
+    "mae",
+    "r2",
+    "spearman",
+    "pearson",
+    "measured_top6_30_100"
+  ],
+  "primary_report": "All seeds, both input modes, both splits; no test-based choice of a favorable baseline",
+  "original_runs_unchanged": true
+}

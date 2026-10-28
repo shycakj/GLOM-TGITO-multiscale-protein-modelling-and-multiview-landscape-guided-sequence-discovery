@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "role": "summit",
+      "start_id": 0,
+      "brightness_gradient_norm": 0.05636933818459511,
+      "terrain_gradient_norm": 0.0022730024065822363,
+      "weighted_terrain_gradient_norm": 0.00010553632455412298,
+      "weighted_terrain_to_brightness_gradient_ratio": 0.001872229273431003,
+      "cosine_between_gradient_terms": 0.7234610319137573
+    },
+    {
+      "role": "ridge",
+      "start_id": 1,
+      "brightness_gradient_norm": 0.12752842903137207,
+      "terrain_gradient_norm": 0.0003730320604518056,
+      "weighted_terrain_gradient_norm": 1.7320011465926655e-05,
+      "weighted_terrain_to_brightness_gradient_ratio": 0.00013581293751485646,
+      "cosine_between_gradient_terms": 0.687145471572876
+    },
+    {
+      "role": "edge",
+      "start_id": 2,
+      "brightness_gradient_norm": 0.16214093565940857,
+      "terrain_gradient_norm": 0.0004998194635845721,
+      "weighted_terrain_gradient_norm": 2.3206797777675092e-05,
+      "weighted_terrain_to_brightness_gradient_ratio": 0.000143127326737158,
+      "cosine_between_gradient_terms": 0.47923460602760315
+    }
+  ],
+  "meaning": "Nonzero weighted terrain gradient enters the native sequence objective, in addition to brightness.",
+  "terrain_weight": 0.04643036209710823,
+  "topk_sources": 6,
+  "test_labels_read": false
+}

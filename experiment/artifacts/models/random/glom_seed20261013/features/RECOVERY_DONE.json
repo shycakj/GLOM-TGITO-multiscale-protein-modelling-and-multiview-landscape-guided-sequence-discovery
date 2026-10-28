@@ -1,0 +1,33 @@
+{
+  "rows": 31434,
+  "features": [
+    "G",
+    "Rf",
+    "Kf",
+    "h32",
+    "global_attn_pool",
+    "global_mean_pool",
+    "global_max_pool",
+    "region9_max_pool",
+    "region9_mean_pool",
+    "region_win_165_174_all_mut512",
+    "region_win_77_86_all_mut512",
+    "keysite_K_flat",
+    "region_win_97_106_all_mut512",
+    "region_win_27_36_all_mut512",
+    "region_win_55_64_all_mut512"
+  ],
+  "brightness_labels_read": false,
+  "model_sha256": "c677ede771d30656d9c93970a9620b16d117e7cc09174468a1bab8a42d32df14",
+  "native_anchor": {
+    "n": 5,
+    "H_rmse": 0.0,
+    "H_max_abs": 0.0,
+    "esm_rmse": 0.0,
+    "reference": "native ESM input_ids + original Bridge.forward"
+  },
+  "original_prediction_rmse": 0.0010029292127967401,
+  "original_prediction_max_abs": 0.008092462280273605,
+  "precision": "float32 encoder -> float16 H roundtrip -> bf16 GLOM",
+  "seconds": 98.97349570319057
+}

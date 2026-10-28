@@ -1,0 +1,15 @@
+{
+  "original": "saprot_baseline_20261019\\train_saprot_lora.py",
+  "original_sha256": "3744c37cd6d2907dd159a19c3b315915a2493f7315014e7e4c70af3c980cdbb5",
+  "new_sha256": "de73c0bfbe9464675c3874bc33b09dca915f4a19b29c30371ea78e250f7c5222",
+  "changes": [
+    "native CLS classifier",
+    "new rank-8 q/k/v/attention-output/feedforward LoRA",
+    "AA-only and predicted-3Di inputs",
+    "raw-label MSE",
+    "AdamW betas .9/.98",
+    "validation MSE selection",
+    "same 25-epoch cap, patience 6 and effective batch64"
+  ],
+  "external_task_weights_used": false
+}

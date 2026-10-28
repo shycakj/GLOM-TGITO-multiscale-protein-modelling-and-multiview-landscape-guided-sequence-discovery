@@ -1,0 +1,18 @@
+{
+  "method": "glom",
+  "seed": 20261015,
+  "split": "depth",
+  "train_n": 13723,
+  "validation_n": 1715,
+  "init": "scratch",
+  "epochs_limit": 120,
+  "patience": 18,
+  "batch_size": 64,
+  "lr": 3e-05,
+  "amp": "bf16",
+  "parameters": 6165971,
+  "test_labels_read": false,
+  "historical_key_sites_and_regions": "fixed architecture design; provenance retained, not reselected on test",
+  "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+  "cuda": "12.8"
+}

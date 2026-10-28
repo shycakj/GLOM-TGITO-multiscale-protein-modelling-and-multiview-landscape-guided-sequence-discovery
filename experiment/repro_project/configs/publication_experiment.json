@@ -1,0 +1,244 @@
+{
+  "protocol_version": "pplu-publication-v4-2026-09-02",
+  "master_seed": 20260902,
+  "replicate_seeds": [
+    20260902,
+    20260903,
+    20260904
+  ],
+  "sequence_length": 221,
+  "data": {
+    "sequence_csv": "data/raw/pplu_31480_sequences.csv",
+    "prediction_csv": "data/raw/pplu_31k_predictions.csv",
+    "h_embeddings": "assets/pplu_31k_H_embeddings.npy",
+    "p4_features": "assets/pplu_pmutation_p4.npy",
+    "legacy_released_train": "provenance/legacy_hpo_assets/v12_9_pplu_high42_module_split.released_train.csv",
+    "legacy_released_val": "provenance/legacy_hpo_assets/v12_9_pplu_high42_module_split.released_val.csv",
+    "legacy_hidden_test": "provenance/legacy_hpo_assets/v12_9_pplu_high42_module_split.hidden_test.csv",
+    "legacy_glom_ckpt": "provenance/legacy_hpo_assets/best_model_pplu_31k.pt",
+    "bridge_ckpt": "assets/warm_best_model.pt",
+    "legacy_terrain_12source": "provenance/legacy_hpo_assets/terrain_12source.npz"
+  },
+  "search_split": {
+    "top_n": 1500,
+    "strata": 20,
+    "hidden_per_stratum": 20,
+    "glom_high_per_stratum": 40,
+    "tgito_tune_per_stratum": 15,
+    "glom_val_fraction": 0.1,
+    "mutation_budget": 2
+  },
+  "glom": {
+    "epochs": 120,
+    "batch_size": 32,
+    "learning_rate": 3e-05,
+    "weight_decay": 0.0001,
+    "patience": 18,
+    "scheduler": "cosine",
+    "init_mode": "scratch_strict_headline",
+    "note": "Strict headline: reuse precomputed H/P, Bridge, architecture; DO NOT warm-start from supervised full31K best_model_pplu_31k.pt because hidden400 was in that supervised fit. Optional nonblind warm-start script is labeled separately.",
+    "selection_metric": "val_spearman",
+    "gradient_clip": 1.0,
+    "huber_delta": 1.0
+  },
+  "terrain": {
+    "sources": [
+      "global_attn_pool",
+      "global_mean_pool",
+      "global_max_pool",
+      "region9_max_pool",
+      "region9_mean_pool",
+      "region_win_165_174_all_mut512",
+      "region_win_77_86_all_mut512",
+      "keysite_K_flat",
+      "region_win_97_106_all_mut512",
+      "region_win_27_36_all_mut512",
+      "region_win_55_64_all_mut512",
+      "sequence"
+    ],
+    "umap_neighbors": 30,
+    "umap_min_dist": 0.08,
+    "local_knn": 48,
+    "gate_oof_folds": 5,
+    "source_prior_mode": "uniform_for_headline"
+  },
+  "tgito_tuning": {
+    "development_only": true,
+    "method": "multivariate_TPE_plus_successive_halving",
+    "study_seed": 20260902,
+    "n_trials": 36,
+    "startup_trials": 12,
+    "reduction_factor": 3,
+    "fidelities": [
+      {
+        "stage": 0,
+        "seeds": 4,
+        "steps": 25
+      },
+      {
+        "stage": 1,
+        "seeds": 8,
+        "steps": 45
+      },
+      {
+        "stage": 2,
+        "seeds": 16,
+        "steps": 70
+      }
+    ],
+    "confirmation_top_k": 4,
+    "confirmation_seeds": 24,
+    "fixed": {
+      "mutation_budget": 2,
+      "num_restarts": 1,
+      "brightness_weight": 1.0,
+      "true_high_weight": 0.0,
+      "embedding_realism_weight": 0.0,
+      "embedding_repair_weight": 0.0,
+      "miner_weight": 0.0,
+      "budget_relative": "seed",
+      "terrain_gate_mode": "risk",
+      "proposal_order": 2,
+      "proposal_candidates": 64,
+      "seed_explore_min_change": 1.0,
+      "amp_dtype": "bf16",
+      "accept_by_objective": true,
+      "select_by_objective": true,
+      "novelty_min_hamming": 1,
+      "reject_known_output": true
+    },
+    "search_space": {
+      "terrain_weight": {
+        "type": "float",
+        "low": 0.018,
+        "high": 0.05
+      },
+      "seed_explore_weight": {
+        "type": "float",
+        "low": 0.14,
+        "high": 0.28
+      },
+      "lr": {
+        "type": "float",
+        "low": 0.035,
+        "high": 0.065,
+        "log": false
+      },
+      "terrain_topk": {
+        "type": "categorical",
+        "choices": [
+          4,
+          5,
+          6
+        ]
+      },
+      "terrain_gate_temp": {
+        "type": "float",
+        "low": 0.16,
+        "high": 0.26
+      },
+      "terrain_support_weight": {
+        "type": "float",
+        "low": 0.4,
+        "high": 0.7
+      },
+      "terrain_risk_weight": {
+        "type": "float",
+        "low": 0.45,
+        "high": 0.75
+      },
+      "terrain_pred_gap_weight": {
+        "type": "float",
+        "low": 0.1,
+        "high": 0.26
+      },
+      "terrain_source_quality_power": {
+        "type": "float",
+        "low": 0.65,
+        "high": 1.0
+      },
+      "proposal_every": {
+        "type": "categorical",
+        "choices": [
+          4,
+          6,
+          8
+        ]
+      }
+    },
+    "objective": {
+      "high_threshold": 4.2,
+      "max_hamming": 2,
+      "brightness_gamma": 1.5,
+      "weights": {
+        "treasure": 0.5,
+        "coverage": 0.2,
+        "predicted_gain": 0.2,
+        "diversity": 0.1
+      },
+      "distance_weights": {
+        "0": 1.0,
+        "1": 0.7,
+        "2": 0.4
+      },
+      "note": "Development-only target is legacy hidden_test after embargoing every new hidden400 sequence hash. This objective never opens final hidden400 labels."
+    }
+  },
+  "multipeak": {
+    "grid_size": 50,
+    "target_mountains": 900,
+    "seed_roles": [
+      "summit",
+      "ridge",
+      "edge"
+    ],
+    "micro_dedup_jaccard": 0.92,
+    "mean_diff": 0.035,
+    "q90_diff": 0.05,
+    "frac435_diff": 0.06,
+    "weak_mean_threshold": 3.9,
+    "weak_max_threshold": 4.2,
+    "global_top_keep": 200,
+    "use_only_observed_rows": true,
+    "source_prior_mode": "uniform"
+  },
+  "comparison": {
+    "methods": [
+      "tgito",
+      "musearch",
+      "adalead",
+      "evobo",
+      "pure_random",
+      "gpucb_adapted",
+      "evolvepro_adapted"
+    ],
+    "same_seed_plan": true,
+    "final_proposals_per_start": 1,
+    "mutation_budget": 2,
+    "headline_score_k": [
+      10,
+      50,
+      100,
+      200,
+      500,
+      1000
+    ],
+    "flexs_rounds": 5,
+    "flexs_sequences_batch_size": 20,
+    "flexs_model_queries_per_batch": 1000,
+    "same_multipeak_seed_plan": true,
+    "strict_hidden400": true,
+    "methods_headline": [
+      "tgito",
+      "musearch",
+      "adalead",
+      "evobo",
+      "pure_random"
+    ],
+    "methods_optional": [
+      "gpucb_adapted",
+      "evolvepro_adapted"
+    ],
+    "note": "Every method starts from the exact same summit/ridge/edge seed rows, may not output an observed sequence, must remain Hamming<=2 from its start, and contributes exactly one final proposal per start."
+  }
+}

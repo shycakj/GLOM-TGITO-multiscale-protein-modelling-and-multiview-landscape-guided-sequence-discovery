@@ -1,0 +1,11 @@
+{
+  "source": "global_max_pool",
+  "calibration_auc": 0.907342846731862,
+  "calibration_ap": 0.34901648832063464,
+  "calibration_top60_high435": 0.48333333333333334,
+  "source_quality": 0.7801399927123034,
+  "memory_n": 22003,
+  "calibration_n": 3143,
+  "test_labels_read": false,
+  "quality_features_use_query_true_label": false
+}

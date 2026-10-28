@@ -1,0 +1,18 @@
+{
+  "citation": "Gonzalez Somermeyer et al. (2022), eLife 11:e75842",
+  "doi": "10.7554/eLife.75842",
+  "repository": "https://github.com/aequorea238/Orthologous_GFP_Fitness_Peaks",
+  "revision": "799bd76889918bf1551c60016fb23278024cac73",
+  "source_file": "data/final_datasets/amacGFP_cgreGFP_ppluGFP2__final_aminoacid_genotypes_to_brightness.csv",
+  "source_sha256": "41eb96cbaba255e64f4d229b20f6e53bf2e512ba0953bc032697e7b82c6f3ca8",
+  "download_url": "https://raw.githubusercontent.com/aequorea238/Orthologous_GFP_Fitness_Peaks/799bd76889918bf1551c60016fb23278024cac73/data/final_datasets/amacGFP_cgreGFP_ppluGFP2__final_aminoacid_genotypes_to_brightness.csv",
+  "source_gene": "ppluGFP",
+  "source_gene_records": 32260,
+  "frozen_records": 31480,
+  "all_frozen_genotypes_found": true,
+  "label_definition": "log10(replicates_mean_brightness)",
+  "max_label_difference": 8.881784197001252e-15,
+  "reproduction_input": "experiment/repro_project/data/raw/pplu_31480_sequences.csv",
+  "reproduction_input_sha256": "e1a9b1801fd2731bf279dfe6a47a0aff8525707509b8d7d95fd29049a22c6fba",
+  "coordinates": "Frozen model sequences use the 221-residue reference. Original aaMutations annotations are retained verbatim, including terminal annotations outside that modeled reference. Use frozen sequences and row IDs for exact replication."
+}

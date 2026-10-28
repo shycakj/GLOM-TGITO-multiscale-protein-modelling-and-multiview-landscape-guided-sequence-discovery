@@ -1,0 +1,48 @@
+{
+  "stage": "saprot",
+  "rows": 31480,
+  "sequence_sha256": "1d632fda53d229cb28dfc98608a190883c196982c5189831e4b3aa475a1acc5b",
+  "protocol_sha256": "964b37948b2a5299092784178648df4c73e39eaba6121485fb7ac55209065111",
+  "labels_read": false,
+  "bridge_sha256": "1dcc0d4031184d300c3fd1f8e0fd956626947fd81d71f65265c4474b5bcbb292",
+  "completed_rows": 31480,
+  "dim": 1280,
+  "model_manifest": {
+    "repo": "westlake-repl/SaProt_650M_AF2",
+    "revision": "d9b9ad00ef61c0990e611b2b43f2231c7de24b38",
+    "files": [
+      {
+        "file": "config.json",
+        "bytes": 647,
+        "sha256": "927bf8961c93e0667cecb6f928aa7077e1a7f55c8483ae58173f155261f1c3b3"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 40,
+        "sha256": "bfd8a81f4215e59174634eec71eea99aa1841d8692bdf5c60e9ecaa12904fde8"
+      },
+      {
+        "file": "special_tokens_map.json",
+        "bytes": 125,
+        "sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1"
+      },
+      {
+        "file": "vocab.txt",
+        "bytes": 1354,
+        "sha256": "d4289b3ff55d50b1aa33a3141ec344fc2a69cb3dca43aeefe9fccfee371ffd28"
+      },
+      {
+        "file": "pytorch_model.bin",
+        "bytes": 2606517773,
+        "sha256": "513c39088804b74309d961174d5fc7aeabfb9b79d2814cdc7e465d4fe4b9f216"
+      }
+    ],
+    "expected_weight_sha256": "513c39088804b74309d961174d5fc7aeabfb9b79d2814cdc7e465d4fe4b9f216",
+    "weights_downloaded": true
+  },
+  "precision": "native bf16; mean/storage float32",
+  "token_input": "amino-acid plus predicted 3Di, no GLOM mutation features",
+  "batch_size": 64,
+  "elapsed_seconds": 136.8259067069739,
+  "max_reserved_gib": 2.765625
+}

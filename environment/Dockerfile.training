@@ -1,0 +1,8 @@
+FROM nvcr.io/nvidia/pytorch:25.03-py3
+ENV PYTHONUTF8=1 \
+    OMP_NUM_THREADS=2 \
+    OPENBLAS_NUM_THREADS=2 \
+    MKL_NUM_THREADS=2
+COPY environment/requirements_training.txt /tmp/glom-requirements.txt
+RUN python -m pip install --no-cache-dir -r /tmp/glom-requirements.txt
+WORKDIR /workspace/glom_tgito

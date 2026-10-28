@@ -1,0 +1,15 @@
+{
+  "topk_sources": [
+    3,
+    5,
+    8
+  ],
+  "terrain_risk_weight": [
+    0.325,
+    0.65,
+    1.3
+  ],
+  "selection": "calibration Top-30 measured mean; tie-break Top-6 mean, then smaller config ID",
+  "confidence_weights": "unchanged v13.5",
+  "test_labels_read": false
+}

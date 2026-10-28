@@ -1,0 +1,43 @@
+{
+  "model": "esm2_650m",
+  "completed_rows": 31480,
+  "rows": 31480,
+  "dim": 1280,
+  "sequence_sha256": "1d632fda53d229cb28dfc98608a190883c196982c5189831e4b3aa475a1acc5b",
+  "precision": "bf16 encoder / float32 mean and storage",
+  "batch_size": 16,
+  "labels_read": false,
+  "model_manifest": {
+    "repo": "facebook/esm2_t33_650M_UR50D",
+    "revision": "08e4846e537177426273712802403f7ba8261b6c",
+    "files": [
+      {
+        "file": "config.json",
+        "bytes": 724,
+        "sha256": "539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b"
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 2609506392,
+        "sha256": "a08adabb949fa67ad3c14b509d04fd60368b35007b0095e3358f81200c4f4db0"
+      },
+      {
+        "file": "special_tokens_map.json",
+        "bytes": 125,
+        "sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 95,
+        "sha256": "7e9161ecdb548ec45a41cbc6b24aa4476fdd418461f491c4207baa99419a29ad"
+      },
+      {
+        "file": "vocab.txt",
+        "bytes": 93,
+        "sha256": "0b82cc0a7c7cf9e567b1e5892d793285b9fbae822c964ca48696f7db44598e03"
+      }
+    ]
+  },
+  "elapsed_seconds": 346.8083487348631,
+  "peak_gpu_gib": 1.4701242446899414
+}

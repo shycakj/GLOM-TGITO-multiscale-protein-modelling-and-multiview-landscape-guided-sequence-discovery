@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite this software and the accompanying GLOM–TGITO manuscript."
+type: software
+title: "GLOM–TGITO: multiscale protein modelling and multiview landscape-guided sequence discovery"
+version: "2026.10.28"
+date-released: "2026-10-28"
+repository-code: "https://github.com/shycakj/GLOM-TGITO-multiscale-protein-modelling-and-multiview-landscape-guided-sequence-discovery"
+authors:
+  - family-names: Xiong
+    given-names: Yuchen
+  - family-names: Tirta
+    given-names: Yosef Kristian
+  - family-names: Wang
+    given-names: Shiyu
+  - family-names: Hu
+    given-names: Zhenquan
+  - family-names: Ma
+    given-names: Wenjing
+  - family-names: Yuan
+    given-names: Shuguang

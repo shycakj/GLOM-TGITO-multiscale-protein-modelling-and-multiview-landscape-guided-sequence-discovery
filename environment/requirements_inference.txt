@@ -1,0 +1,9 @@
+# Install torch for the desired CPU/CUDA platform separately.
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.15.2
+scikit-learn==1.6.1
+transformers==4.47.0
+tokenizers==0.21.4
+safetensors==0.5.3
+einops==0.8.1

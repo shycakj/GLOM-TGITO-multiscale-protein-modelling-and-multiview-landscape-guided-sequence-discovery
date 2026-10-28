@@ -1,0 +1,191 @@
+diff --git a/spurs/__init__.py b/spurs/__init__.py
+index f85f882..065b1fc 100644
+--- a/spurs/__init__.py
++++ b/spurs/__init__.py
+@@ -1,5 +1,5 @@
+ # some code adated from https://github.com/BytedProtein/ByProt and https://github.com/ashleve/lightning-hydra-template
+ import spurs.models
+-import spurs.tasks
++# Training tasks are not loaded by the inference runner.
+ import spurs.utils
+ import spurs.datamodules
+\ No newline at end of file
+diff --git a/spurs/datamodules/__init__.py b/spurs/datamodules/__init__.py
+index 5728f3e..8874121 100644
+--- a/spurs/datamodules/__init__.py
++++ b/spurs/datamodules/__init__.py
+@@ -15,4 +15,4 @@ def register_datamodule(name):
+     return decorator
+ 
+ 
+-import_modules(os.path.dirname(__file__), "spurs.datamodules")
++# Inference-only: import_modules(os.path.dirname(__file__), "spurs.datamodules")
+diff --git a/spurs/models/__init__.py b/spurs/models/__init__.py
+index a5a690d..a9d185a 100644
+--- a/spurs/models/__init__.py
++++ b/spurs/models/__init__.py
+@@ -19,4 +19,4 @@ def register_model(name):
+ 
+ 
+ # automatically import any Python files in the models/ directory
+-import_modules(os.path.dirname(__file__), "spurs.models", excludes=['protein_structure_prediction'])
++# Inference-only: import_modules(os.path.dirname(__file__), "spurs.models", excludes=['protein_structure_prediction'])
+diff --git a/spurs/models/stability/esm.py b/spurs/models/stability/esm.py
+index 12c653a..843f6c8 100644
+--- a/spurs/models/stability/esm.py
++++ b/spurs/models/stability/esm.py
+@@ -18,12 +18,12 @@ log = utils.get_logger(__name__)
+ from .mlp import MLP, MLPConfig
+ @dataclass
+ class ESM:
+-    encoder: ProteinMPNNConfig = field(default=ProteinMPNNConfig())
++    encoder: ProteinMPNNConfig = field(default_factory=ProteinMPNNConfig)
+     adapter_layer_indices: List = field(default_factory=lambda: [-1, ])
+     separate_loss: bool = True
+     name: str = 'esm2_t33_650M_UR50D'
+     dropout: float = 0.1
+-    mlp: MLPConfig = field(default=MLPConfig())
++    mlp: MLPConfig = field(default_factory=MLPConfig)
+ 
+ 
+ @register_model('esm_reg')
+diff --git a/spurs/models/stability/esm_unsupervised.py b/spurs/models/stability/esm_unsupervised.py
+index c3e876d..99c376e 100644
+--- a/spurs/models/stability/esm_unsupervised.py
++++ b/spurs/models/stability/esm_unsupervised.py
+@@ -22,7 +22,7 @@ class MPNNESMCAT:
+     separate_loss: bool = True
+     name: str = 'esm2_t33_650M_UR50D'
+     dropout: float = 0.1
+-    mlp: MLPConfig = field(default=MLPConfig())
++    mlp: MLPConfig = field(default_factory=MLPConfig)
+ 
+ 
+ @register_model('esm_unsupervised')
+diff --git a/spurs/models/stability/mpnn.py b/spurs/models/stability/mpnn.py
+index d9fedc8..22a4200 100644
+--- a/spurs/models/stability/mpnn.py
++++ b/spurs/models/stability/mpnn.py
+@@ -17,12 +17,12 @@ log = utils.get_logger(__name__)
+ from .mlp import MLP, MLPConfig
+ @dataclass
+ class MPNN:
+-    encoder: ProteinMPNNConfig = field(default=ProteinMPNNConfig())
++    encoder: ProteinMPNNConfig = field(default_factory=ProteinMPNNConfig)
+     adapter_layer_indices: List = field(default_factory=lambda: [-1, ])
+     separate_loss: bool = True
+     name: str = 'ProteinMPNN'
+     dropout: float = 0.1
+-    mlp: MLPConfig = field(default=MLPConfig())
++    mlp: MLPConfig = field(default_factory=MLPConfig)
+ 
+ 
+ @register_model('mpnn_reg')
+diff --git a/spurs/models/stability/mpnn_unsupervised.py b/spurs/models/stability/mpnn_unsupervised.py
+index 578aee5..93624ce 100644
+--- a/spurs/models/stability/mpnn_unsupervised.py
++++ b/spurs/models/stability/mpnn_unsupervised.py
+@@ -18,12 +18,12 @@ from .mlp import MLP, MLPConfig
+ 
+ @dataclass
+ class MPNN:
+-    encoder: ProteinMPNNConfig = field(default=ProteinMPNNConfig())
++    encoder: ProteinMPNNConfig = field(default_factory=ProteinMPNNConfig)
+     adapter_layer_indices: List = field(default_factory=lambda: [-1, ])
+     separate_loss: bool = True
+     name: str = 'proteinmpnn'
+     dropout: float = 0.1
+-    mlp: MLPConfig = field(default=MLPConfig()) # mlp is not used in this model
++    mlp: MLPConfig = field(default_factory=MLPConfig) # mlp is not used in this model
+ 
+     
+ 
+diff --git a/spurs/models/stability/org_transfer_model.py b/spurs/models/stability/org_transfer_model.py
+index 05f9f5a..c61ed53 100644
+--- a/spurs/models/stability/org_transfer_model.py
++++ b/spurs/models/stability/org_transfer_model.py
+@@ -1551,7 +1551,7 @@ from spurs.models.stability.basemodel import BaseModel
+ 
+ @dataclass
+ class TransferModelConfig:
+-    encoder: ProteinMPNNConfig = field(default=ProteinMPNNConfig())
++    encoder: ProteinMPNNConfig = field(default_factory=ProteinMPNNConfig)
+     
+ @register_model('org_transfermodel')
+ class TransferModel(BaseModel):
+diff --git a/spurs/models/stability/spurs.py b/spurs/models/stability/spurs.py
+index 935a15b..587c46e 100644
+--- a/spurs/models/stability/spurs.py
++++ b/spurs/models/stability/spurs.py
+@@ -18,12 +18,12 @@ from .mlp import MLP, MLPConfig
+ 
+ @dataclass
+ class SPURSConfig:
+-    encoder: ProteinMPNNConfig = field(default=ProteinMPNNConfig())
++    encoder: ProteinMPNNConfig = field(default_factory=ProteinMPNNConfig)
+     adapter_layer_indices: List = field(default_factory=lambda: [-1, ])
+     separate_loss: bool = True
+     name: str = 'esm2_t33_650M_UR50D'
+     dropout: float = 0.1
+-    mlp: MLPConfig = field(default=MLPConfig())
++    mlp: MLPConfig = field(default_factory=MLPConfig)
+ 
+ 
+ @register_model('spurs')
+diff --git a/spurs/models/stability/spurs_multi.py b/spurs/models/stability/spurs_multi.py
+index a4049ab..eedae86 100644
+--- a/spurs/models/stability/spurs_multi.py
++++ b/spurs/models/stability/spurs_multi.py
+@@ -20,13 +20,13 @@ log = utils.get_logger(__name__)
+ 
+ @dataclass
+ class SPURSMultiConfig:
+-    encoder: ProteinMPNNConfig = field(default=ProteinMPNNConfig())
++    encoder: ProteinMPNNConfig = field(default_factory=ProteinMPNNConfig)
+     adapter_layer_indices: List = field(default_factory=lambda: [-1, ])
+     separate_loss: bool = True
+     name: str = 'esm2_t33_650M_UR50D'
+     dropout: float = 0.1
+-    mlp: MLPConfig = field(default=MLPConfig())
+-    multi: MLPConfig = field(default=MLPConfig())
++    mlp: MLPConfig = field(default_factory=MLPConfig)
++    multi: MLPConfig = field(default_factory=MLPConfig)
+     agg_type: str = 'sum'
+     agg_dim: int = 128
+ 
+diff --git a/spurs/utils/__init__.py b/spurs/utils/__init__.py
+index b1a5eff..cd827cf 100644
+--- a/spurs/utils/__init__.py
++++ b/spurs/utils/__init__.py
+@@ -20,10 +20,11 @@ import torch
+ from omegaconf import DictConfig, OmegaConf
+ from pytorch_lightning import (Callback, LightningDataModule, LightningModule)
+ from pytorch_lightning.utilities.seed import isolate_rng
+-from pytorch_lightning.loggers import LightningLoggerBase, TensorBoardLogger
++from pytorch_lightning.loggers import TensorBoardLogger
++from pytorch_lightning.loggers.logger import Logger as LightningLoggerBase
+ from pytorch_lightning.utilities import rank_zero_only
+ 
+-from . import strategies
++# Training-only strategy registration is not needed for inference.
+ from .config import load_yaml_config, instantiate_from_config, resolve_experiment_config
+ 
+ 
+@@ -148,7 +149,7 @@ def log_hyperparameters(
+     datamodule: pl.LightningDataModule,
+     trainer: pl.Trainer,
+     callbacks: List[pl.Callback],
+-    logger: List[pl.loggers.LightningLoggerBase],
++    logger: List[LightningLoggerBase],
+ ) -> None:
+     """Controls which config parts are saved by Lightning loggers.
+ 
+@@ -195,7 +196,7 @@ def finish(
+     datamodule: pl.LightningDataModule,
+     trainer: pl.Trainer,
+     callbacks: List[pl.Callback],
+-    logger: List[pl.loggers.LightningLoggerBase],
++    logger: List[LightningLoggerBase],
+ ) -> None:
+     """Makes sure everything closed properly."""
+ 

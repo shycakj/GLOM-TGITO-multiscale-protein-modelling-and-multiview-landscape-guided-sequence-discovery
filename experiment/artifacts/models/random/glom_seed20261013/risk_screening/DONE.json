@@ -1,0 +1,12 @@
+{
+  "run": "glom_seed20261013",
+  "best_source_selected_on_calibration": "sequence",
+  "terrain_memory": "train only",
+  "quality_selection": "calibration only",
+  "confidence": "original v13 weights",
+  "candidate_normalization": "min-max on each unlabeled candidate pool",
+  "topk_sources": 5,
+  "calibration_grid": "9 risk/top-k configurations, selected on calibration Top-30 mean before test",
+  "free_generation": false,
+  "evaluation": "measured held-out candidate screening"
+}

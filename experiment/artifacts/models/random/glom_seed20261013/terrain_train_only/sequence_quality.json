@@ -1,0 +1,11 @@
+{
+  "source": "sequence",
+  "calibration_auc": 0.9340463458110517,
+  "calibration_ap": 0.3637026564931133,
+  "calibration_top60_high435": 0.45,
+  "source_quality": 0.7888324420677362,
+  "memory_n": 22003,
+  "calibration_n": 3143,
+  "test_labels_read": false,
+  "quality_features_use_query_true_label": false
+}

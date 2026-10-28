@@ -1,0 +1,10 @@
+{
+  "best_validation_spearman": 0.722204881954162,
+  "feature": "esmc_6b",
+  "head": "ridge",
+  "seed": 20261013,
+  "split": "random",
+  "selection": "validation Spearman",
+  "training_test_labels_read": false,
+  "alpha": 100
+}

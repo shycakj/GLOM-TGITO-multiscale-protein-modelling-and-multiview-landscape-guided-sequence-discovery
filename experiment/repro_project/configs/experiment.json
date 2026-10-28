@@ -1,0 +1,69 @@
+{
+  "protocol_version": "2026-09-pplu-blind-v2",
+  "master_seed": 20260902,
+  "replicate_seeds": [20260902, 20260903, 20260904],
+  "data": {
+    "windows_dir": "D:\\桌面\\GFP\\LL_GF\\GFP_pplu\\results",
+    "wsl_dir": "/mnt/d/桌面/GFP/LL_GF/GFP_pplu/results",
+    "sequence_file": "pplu_31480_sequences.csv",
+    "prediction_file": "pplu_31k_predictions.csv",
+    "expected_rows": 31480,
+    "sequence_length": 221,
+    "sequence_column": "sequence",
+    "brightness_column": "medianBrightness",
+    "split_column": "split",
+    "mutations_column": "aaMutations"
+  },
+  "prediction_task": {
+    "split_mode": "existing",
+    "allowed_split_names": {
+      "train": ["train", "training", "tr"],
+      "val": ["val", "valid", "validation", "dev"],
+      "test": ["test", "testing", "te"]
+    },
+    "high_threshold": 4.2,
+    "topk": [10, 50, 100, 200, 500]
+  },
+  "search_task": {
+    "top_n": 1500,
+    "num_strata": 20,
+    "hidden_per_stratum": 20,
+    "glom_high_per_stratum": 40,
+    "tgito_tune_per_stratum": 15,
+    "seed_pool_per_stratum": 5,
+    "glom_validation_fraction": 0.1,
+    "mutation_budget_from_start": 2,
+    "hidden_near_hit_hamming": 2,
+    "high_threshold": 4.2,
+    "flexs_rounds": 5,
+    "flexs_sequences_batch_size": 20,
+    "flexs_model_queries_per_batch": 1000,
+    "gpucb_beta": 1.0,
+    "dynamic_candidates_per_seed": 1000,
+    "dynamic_rounds": 5,
+    "dynamic_batch_size": 20
+  },
+  "models": {
+    "esm2_rf": {
+      "hf_model": "facebook/esm2_t33_650M_UR50D",
+      "embedding_batch_size": 16,
+      "rf_estimators": 500
+    },
+    "glom": {
+      "pipeline_root": "AUTO_FROM_TGITO_PIPELINE_ROOT",
+      "bridge_checkpoint": "AUTO_FROM_GLOM_BRIDGE_CKPT",
+      "blind_checkpoint": "artifacts/glom_blind/best_model_pplu_blind.pt",
+      "embedding_batch_size": 8,
+      "training_batch_size": 32,
+      "epochs": 100,
+      "learning_rate": 3e-5
+    }
+  },
+  "repositories": {
+    "mu_protein": {"url": "https://github.com/microsoft/Mu-Protein.git", "commit": "be65887f86628ade657dae2c14757f9f84ecee83"},
+    "proteinnpt": {"url": "https://github.com/OATML-Markslab/ProteinNPT.git", "commit": "ba50f15671870039aff8cff97081073dfcc73eb2"},
+    "evolvepro": {"url": "https://github.com/mat10d/EvolvePro.git", "commit": "1c77697d0c09bf6989a1562a55da99301a12e2cd"},
+    "metalic": {"url": "https://github.com/instadeepai/metalic.git", "commit": "f066a1e02c0f16b84fca19053213506f12c7c5eb"},
+    "frp_mlde": {"url": "https://github.com/WEHIGenomicsRnD/Manuscript_FRP_MLDE.git", "commit": "f14d70ee493b2b12e931dcfdfda9162f75f25c1d"}
+  }
+}

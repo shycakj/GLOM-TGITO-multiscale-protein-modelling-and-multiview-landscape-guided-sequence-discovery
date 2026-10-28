@@ -1,0 +1,115 @@
+{
+  "tracked_files": 700,
+  "tracked_bytes": 19930178,
+  "python_sources_parsed": 365,
+  "job_plan_counts": {
+    "training_glom": 16,
+    "discovery": 27,
+    "md": 342
+  },
+  "numerical_tables": {
+    "prediction": {
+      "runs": 78,
+      "numeric_values_checked": 1872,
+      "max_absolute_difference": 4.517812184356984e-07
+    },
+    "deviation": {
+      "top100_candidates": 500,
+      "calibration_n": 3143,
+      "high_calibration_n": 950,
+      "measured_test_n": 3144,
+      "high_measured_test_n": 973,
+      "high_calibration_q95": 0.5837557862799769,
+      "threshold_comparisons": 100,
+      "threshold_values_verified": 300,
+      "measured_error_values_verified": 160,
+      "auroc_values_verified": 4
+    },
+    "discovery": {
+      "methods": 5,
+      "batch_comparisons": 15,
+      "numeric_values_checked": 195,
+      "nested_top6_30_100": true,
+      "tasks": 2700,
+      "distinct_start_sequences": 1308,
+      "active_views_at_each_top100_endpoint": 6
+    },
+    "md": {
+      "systems": 56,
+      "trajectories": 168,
+      "candidates": 30,
+      "paired_runs": 90,
+      "duration_ns_each": 3.0,
+      "figure5F_values_checked": 9
+    }
+  },
+  "statistics": {
+    "status": "PASS",
+    "analyses": [
+      "reliability",
+      "joint_reliability"
+    ],
+    "tables_checked": [
+      {
+        "path": "reports/saprot_official_recipe_20261019/paired_error_differences.csv",
+        "rows": 16,
+        "numeric_cells": 80
+      },
+      {
+        "path": "artifacts/discovery_v3/embedding_familiarity_v1/threshold_grid_v2/calibration_bootstrap.csv",
+        "rows": 100,
+        "numeric_cells": 800
+      },
+      {
+        "path": "artifacts/discovery_v3/embedding_familiarity_v1/threshold_audit/top100_threshold_sensitivity.csv",
+        "rows": 160,
+        "numeric_cells": 1280
+      },
+      {
+        "path": "reports/discovery_v3_reliability_comparison/all_methods_reliability.csv",
+        "rows": 15,
+        "numeric_cells": 1545
+      },
+      {
+        "path": "reports/discovery_v3_reliability_comparison/baseline_effect_sizes.csv",
+        "rows": 300,
+        "numeric_cells": 2100
+      },
+      {
+        "path": "reports/discovery_v3_reliability_comparison/joint_novelty_reliability_full_grid.csv",
+        "rows": 405,
+        "numeric_cells": 4050
+      },
+      {
+        "path": "reports/discovery_v3_reliability_comparison/joint_rule_measured_validation.csv",
+        "rows": 27,
+        "numeric_cells": 216
+      }
+    ]
+  },
+  "mechanisms": {
+    "status": "PASS",
+    "from_trajectories": false,
+    "tables_checked": [
+      "tables/all30_first_pass_mechanisms.csv",
+      "tables/Top30_complete_mechanism_comparison.csv"
+    ]
+  },
+  "regenerated_main_figures": 5,
+  "regenerated_supplementary_figures": 14,
+  "CPU_reference_inference_completed": true,
+  "new_full_GPU_campaign_executed_during_packaging": false,
+  "MD_trajectories_distributed": false,
+  "credentials_pattern_scan": "No credential strings found in selected source/configuration files.",
+  "public_backbone_downloads": "Pinned upstream downloads; public ESM2-650M was not downloaded during local packaging.",
+  "CPU_inference_check": {
+    "sequences": 4,
+    "maximum_absolute_difference_from_archived_GPU_float32": 0.00028514862060546875,
+    "local_runtime": {
+      "torch": "2.12.0",
+      "transformers": "5.9.0",
+      "numpy": "2.1.3"
+    },
+    "published_training_runtime": "NVIDIA PyTorch 25.03; see environment specifications"
+  }
+}

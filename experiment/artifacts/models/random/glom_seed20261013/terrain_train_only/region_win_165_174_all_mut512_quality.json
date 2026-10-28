@@ -1,0 +1,11 @@
+{
+  "source": "region_win_165_174_all_mut512",
+  "calibration_auc": 0.8023803192798967,
+  "calibration_ap": 0.18669297098551313,
+  "calibration_top60_high435": 0.2833333333333333,
+  "source_quality": 0.6466662234959276,
+  "memory_n": 22003,
+  "calibration_n": 3143,
+  "test_labels_read": false,
+  "quality_features_use_query_true_label": false
+}

@@ -1,0 +1,190 @@
+{
+  "version": "full_discovery_v2",
+  "parent_protocol": {
+    "target_mountains": 900,
+    "selected_mountains": 900,
+    "seed_contexts": 2700,
+    "unique_start_sequences": 1277,
+    "roles": {
+      "summit": 900,
+      "ridge": 900,
+      "edge": 900
+    },
+    "raw_retained_peaks": 942,
+    "dedup_mountains": 940,
+    "per_source": {
+      "global_attn_pool": {
+        "raw": 97,
+        "kept": 87
+      },
+      "global_mean_pool": {
+        "raw": 145,
+        "kept": 120
+      },
+      "global_max_pool": {
+        "raw": 93,
+        "kept": 76
+      },
+      "region9_max_pool": {
+        "raw": 119,
+        "kept": 112
+      },
+      "region9_mean_pool": {
+        "raw": 96,
+        "kept": 76
+      },
+      "region_win_165_174_all_mut512": {
+        "raw": 66,
+        "kept": 61
+      },
+      "region_win_77_86_all_mut512": {
+        "raw": 75,
+        "kept": 65
+      },
+      "keysite_K_flat": {
+        "raw": 76,
+        "kept": 58
+      },
+      "region_win_97_106_all_mut512": {
+        "raw": 81,
+        "kept": 72
+      },
+      "region_win_27_36_all_mut512": {
+        "raw": 68,
+        "kept": 63
+      },
+      "region_win_55_64_all_mut512": {
+        "raw": 64,
+        "kept": 45
+      },
+      "sequence": {
+        "raw": 110,
+        "kept": 107
+      }
+    },
+    "terrain_rows": 22003,
+    "starting_partition": "train",
+    "test_labels_read": false,
+    "plan_sha256": "e7aeb18b4aeccef7446c282a64c39689a02ce44ae3028a3652ceb4b8f519b426",
+    "model_sha256": "c677ede771d30656d9c93970a9620b16d117e7cc09174468a1bab8a42d32df14",
+    "terrain_sha256": "e97364958030b7e2f0a6a7592ad24419a5016f666e2ceb5ef68dba8c67e94974",
+    "risk_config_sha256": "72a3bcd0d4b96fd98a849b970d343d3384fc5b30e76b973922ac4a7d67c5bab1",
+    "split_manifest_sha256": "3b402c9f7e97edf0d635e12cde28a7010723c8ee93f1446823ebb82aa0cd47c4",
+    "historical_design": "v13.5: 50x50, 3x3 cells, strict local maxima, conservative micro-dedup, source balance, summit/ridge/edge",
+    "differences": [
+      "train-only memory instead of production all-label memory",
+      "current frozen calibration quality and mean train-high risk",
+      "execution order follows source-balanced selection for valid nested prefixes"
+    ],
+    "ablation_mountains": 180,
+    "independence": "2700 contexts are not 2700 unique proteins; report unique starts and cluster by shared starts"
+  },
+  "corrections": [
+    "Baseline-corrected smooth mutation count",
+    "Hard objective for hard proposal acceptance and return"
+  ],
+  "pipeline": [
+    "12-terrain peak discovery",
+    "900 peaks with summit/ridge/edge starts",
+    "Dynamic multi-terrain TGITO",
+    "Native confidence and diversity selection"
+  ],
+  "config": {
+    "length": 221,
+    "steps": 70,
+    "lr": 0.04,
+    "min_lr": 0.0001,
+    "line_search_trials": 1,
+    "init_mode": "relaxed",
+    "init_scale": 9.0,
+    "mutable_anchor_logit": 5.0,
+    "mutable_alt_logit": 0.0,
+    "lock_scale": 30.0,
+    "temp_start": 1.2,
+    "temp_end": 0.8,
+    "bridge_temp": 1.0,
+    "brightness_weight": 1.0,
+    "terrain_weight": 0.03,
+    "mutation_budget": 2,
+    "budget_relative": "seed",
+    "budget_weight": 0.25,
+    "entropy_weight": 0.001,
+    "brightness_floor_weight": 12.0,
+    "anchor_drop": 0.05,
+    "accept_drop": 0.03,
+    "mut_mask_mode": "changed",
+    "noise_scale": 0.15,
+    "proposal_every": 6,
+    "proposal_candidates": 64,
+    "proposal_order": 2,
+    "proposal_alts_per_pos": 4,
+    "proposal_accept_margin": 0.0,
+    "proposal_reset_logits": true,
+    "novelty_min_hamming": 1,
+    "sample_every": 10,
+    "seed": 20261013,
+    "amp_dtype": "off",
+    "embedding_realism_weight": 0.0,
+    "embedding_realism_topk": 16,
+    "embedding_realism_temp": 0.08,
+    "embedding_realism_h_alpha": 0.8,
+    "embedding_realism_reward_scale": 0.1,
+    "embedding_realism_min_mut_prob": 0.0001,
+    "embedding_realism_fallback_global_weight": 0.35,
+    "embedding_repair_weight": 0.0,
+    "embedding_repair_topk": 16,
+    "embedding_repair_temp": 0.07,
+    "embedding_repair_h_alpha": 0.8,
+    "embedding_repair_target_combo": 0.63,
+    "embedding_repair_pull_weight": 1.0,
+    "embedding_repair_gap_weight": 1.5,
+    "embedding_repair_denoised_bonus_weight": 0.0,
+    "embedding_repair_residual_penalty": 0.03,
+    "embedding_repair_min_mut_prob": 0.0001,
+    "embedding_repair_fallback_global_weight": 0.25,
+    "embedding_repair_residual_scale": 1.0,
+    "embedding_repair_mode": "directional",
+    "embedding_repair_soft_mutation_floor": 0.0001,
+    "embedding_repair_mutation_weight_power": 1.0,
+    "embedding_repair_site_topk": 16,
+    "embedding_repair_min_mutation_count": 1.25,
+    "embedding_repair_min_mutation_weight": 0.8,
+    "seed_explore_weight": 0.2,
+    "seed_explore_min_change": 1.0,
+    "change_count_threshold_margin": 0.08,
+    "change_count_temp": 0.035,
+    "change_count_topk": 8,
+    "accept_by_objective": true,
+    "objective_accept_drop": 0.01,
+    "select_by_objective": true,
+    "reject_known_output": true
+  },
+  "checkpoints_mountains": [
+    12,
+    60,
+    180,
+    900
+  ],
+  "output_batch_sizes": [
+    6,
+    30,
+    100
+  ],
+  "prediction_floor": 4.31,
+  "pairwise_hamming_min": 2,
+  "candidate_pool": "One native returned valid sequence per context; no promotion from the full query pool",
+  "evaluator_seeds": [
+    20261014,
+    20261015
+  ],
+  "evaluator_role": "Post-freeze robustness, not measured fluorescence",
+  "evaluator_feedback_to_search": false,
+  "test_labels_read": false,
+  "source_sha256": {
+    "run_full_discovery_v2.py": "847ddbb673c6875b905e7d673b435a8aece878e9b9f3f7b1865e09c3c2d77632",
+    "optimizer_consistency.py": "b256afff2783c2499e279a95097dcc2d929de2f93ebb8b7e824526610f9a588a",
+    "fast_proposals.py": "93206b4381179f633559ac5323e169463761e7287af766bc081d460e756f7351",
+    "encoder_contract.py": "beee91dfc59404152427edb06e86687d961520255fc17070a5db5ca5a80effc7"
+  },
+  "numerical_replay_sha256": "8f8a0c519f7eb9f69c5f73cc6fa8c5a10281950d56d3776aeaf8285f5b3e1df6"
+}

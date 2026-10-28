@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "original_rows": 31480,
+  "unique_rows": 31434,
+  "sequence_order_sha256": "1d632fda53d229cb28dfc98608a190883c196982c5189831e4b3aa475a1acc5b",
+  "every_unique_row_mapping_verified": true,
+  "unknown_tokens": 0,
+  "shape": [
+    31480,
+    223
+  ],
+  "aa_tokens_sha256": "a558f1692b5aaa97da326469de35f67af0abd9d84b048f8bca221108716a632a",
+  "protocol_sha256": "2bc9918f4081d591ac89a7e3f56b0fd94606392f91e77a4fa4e796883bd6d6a7",
+  "general_pretrained_weights_sha256": "513c39088804b74309d961174d5fc7aeabfb9b79d2814cdc7e465d4fe4b9f216"
+}

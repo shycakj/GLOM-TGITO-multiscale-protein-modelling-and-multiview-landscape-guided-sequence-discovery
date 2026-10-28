@@ -1,0 +1,33 @@
+{
+  "repo": "westlake-repl/SaProt_650M_AF2",
+  "revision": "d9b9ad00ef61c0990e611b2b43f2231c7de24b38",
+  "files": [
+    {
+      "file": "config.json",
+      "bytes": 647,
+      "sha256": "927bf8961c93e0667cecb6f928aa7077e1a7f55c8483ae58173f155261f1c3b3"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 40,
+      "sha256": "bfd8a81f4215e59174634eec71eea99aa1841d8692bdf5c60e9ecaa12904fde8"
+    },
+    {
+      "file": "special_tokens_map.json",
+      "bytes": 125,
+      "sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1"
+    },
+    {
+      "file": "vocab.txt",
+      "bytes": 1354,
+      "sha256": "d4289b3ff55d50b1aa33a3141ec344fc2a69cb3dca43aeefe9fccfee371ffd28"
+    },
+    {
+      "file": "pytorch_model.bin",
+      "bytes": 2606517773,
+      "sha256": "513c39088804b74309d961174d5fc7aeabfb9b79d2814cdc7e465d4fe4b9f216"
+    }
+  ],
+  "expected_weight_sha256": "513c39088804b74309d961174d5fc7aeabfb9b79d2814cdc7e465d4fe4b9f216",
+  "weights_downloaded": true
+}

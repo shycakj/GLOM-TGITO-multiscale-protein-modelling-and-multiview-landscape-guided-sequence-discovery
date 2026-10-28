@@ -1,0 +1,21 @@
+{
+  "best_validation_spearman": 0.8801919793725534,
+  "epochs": 120,
+  "elapsed_seconds": 2597.3195891012438,
+  "method": "global_only",
+  "seed": 20261013,
+  "split": "random",
+  "train_n": 22003,
+  "validation_n": 3144,
+  "init": "scratch",
+  "epochs_limit": 120,
+  "patience": 18,
+  "batch_size": 64,
+  "lr": 3e-05,
+  "amp": "bf16",
+  "parameters": 1956818,
+  "test_labels_read": false,
+  "historical_key_sites_and_regions": "fixed architecture design; provenance retained, not reselected on test",
+  "torch": "2.7.0a0+7c8ec84dab.nv25.03",
+  "cuda": "12.8"
+}

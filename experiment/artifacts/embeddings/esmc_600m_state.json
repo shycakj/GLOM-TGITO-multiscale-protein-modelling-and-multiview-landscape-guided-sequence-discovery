@@ -1,0 +1,43 @@
+{
+  "model": "esmc_600m",
+  "completed_rows": 31480,
+  "rows": 31480,
+  "dim": 1152,
+  "sequence_sha256": "1d632fda53d229cb28dfc98608a190883c196982c5189831e4b3aa475a1acc5b",
+  "precision": "bf16 encoder / float32 mean and storage",
+  "batch_size": 16,
+  "labels_read": false,
+  "model_manifest": {
+    "repo": "biohub/ESMC-600M",
+    "revision": "fcc9d36f5fff97d9bb69a36e3252de61cc78c968",
+    "files": [
+      {
+        "file": "config.json",
+        "bytes": 1114,
+        "sha256": "2494562385804f86db4ba04cba57e4453b1c080ce9eb758443df67ee852bfd31"
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 2300201352,
+        "sha256": "526573c304b7718f9cfd2a8adf79638feb6752eb38056968bf21d9036b7882ce"
+      },
+      {
+        "file": "special_tokens_map.json",
+        "bytes": 171,
+        "sha256": "0b7245ec86c8c3aeaf61523ba70dfa79be137e6283f127bd651adc30b4f15c74"
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 2879,
+        "sha256": "8d3447b278176e65fb3ef0224472927bf5fee3be46ea2bd77fad0111423cee1f"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 327,
+        "sha256": "dd886af5f7a21ee11455a243e57e421bcd0289dfd15a2d2df4f5135986766a12"
+      }
+    ]
+  },
+  "elapsed_seconds": 225.0980901340954,
+  "peak_gpu_gib": 1.1742448806762695
+}

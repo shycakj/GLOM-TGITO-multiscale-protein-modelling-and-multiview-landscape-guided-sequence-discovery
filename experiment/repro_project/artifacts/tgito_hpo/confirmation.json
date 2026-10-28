@@ -1,0 +1,74 @@
+[
+  {
+    "trial": 12,
+    "study_value": 0.20781154441171418,
+    "confirmation_mean": 0.20176290981085654,
+    "confirmation_std": 0.012691081680548609,
+    "params": {
+      "terrain_weight": 0.04643036209710823,
+      "seed_explore_weight": 0.2224716471770466,
+      "lr": 0.03888462638924003,
+      "terrain_topk": 6,
+      "terrain_gate_temp": 0.20379784230558234,
+      "terrain_support_weight": 0.524977558024416,
+      "terrain_risk_weight": 0.7454479755392924,
+      "terrain_pred_gap_weight": 0.16544933340282295,
+      "terrain_source_quality_power": 0.866533060190367,
+      "proposal_every": 6
+    }
+  },
+  {
+    "trial": 30,
+    "study_value": 0.20542661720500138,
+    "confirmation_mean": 0.2015207556039175,
+    "confirmation_std": 0.013613618501143836,
+    "params": {
+      "terrain_weight": 0.04044071321892526,
+      "seed_explore_weight": 0.24900450323212409,
+      "lr": 0.04380392835041088,
+      "terrain_topk": 6,
+      "terrain_gate_temp": 0.22157278870594543,
+      "terrain_support_weight": 0.6310189560306394,
+      "terrain_risk_weight": 0.48357646124255665,
+      "terrain_pred_gap_weight": 0.18572010043362952,
+      "terrain_source_quality_power": 0.713312913033507,
+      "proposal_every": 6
+    }
+  },
+  {
+    "trial": 8,
+    "study_value": 0.18978365955806564,
+    "confirmation_mean": 0.1912312317988829,
+    "confirmation_std": 0.008382929401098093,
+    "params": {
+      "terrain_weight": 0.02173133495142907,
+      "seed_explore_weight": 0.23131247814833691,
+      "lr": 0.045751138993030564,
+      "terrain_topk": 6,
+      "terrain_gate_temp": 0.2261430073759773,
+      "terrain_support_weight": 0.5710761518666233,
+      "terrain_risk_weight": 0.5480081588864861,
+      "terrain_pred_gap_weight": 0.1597802895373437,
+      "terrain_source_quality_power": 0.8944057193996091,
+      "proposal_every": 6
+    }
+  },
+  {
+    "trial": 22,
+    "study_value": 0.21455350646423696,
+    "confirmation_mean": 0.18155022060859574,
+    "confirmation_std": 0.01879392212699083,
+    "params": {
+      "terrain_weight": 0.03701622947270413,
+      "seed_explore_weight": 0.2206446608322035,
+      "lr": 0.03590827300528988,
+      "terrain_topk": 6,
+      "terrain_gate_temp": 0.2318412019339935,
+      "terrain_support_weight": 0.6200228320425625,
+      "terrain_risk_weight": 0.4984999307877764,
+      "terrain_pred_gap_weight": 0.16424996352731924,
+      "terrain_source_quality_power": 0.8398345516994999,
+      "proposal_every": 6
+    }
+  }
+]

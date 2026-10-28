@@ -1,0 +1,7 @@
+{
+  "n": 2,
+  "H_rmse": 0.0,
+  "H_max_abs": 0.0,
+  "esm_rmse": 0.0,
+  "reference": "native ESM input_ids + original Bridge.forward"
+}

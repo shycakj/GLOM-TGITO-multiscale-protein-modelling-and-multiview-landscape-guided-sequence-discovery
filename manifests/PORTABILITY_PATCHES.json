@@ -1,0 +1,23 @@
+[
+  {
+    "path": "experiment/run_proteinttt.py",
+    "change": "Use the recorded source commit when the distributed source snapshot has no .git directory. Training and scoring are unchanged.",
+    "commit": "f14ae176422cf57a80215108b437fcb0d9985e8e"
+  },
+  {
+    "path": "biophysics/mechanism_analysis_20261027/source/analyze_population.py",
+    "change": "Resolve training observations under the portable experiment/data folder."
+  },
+  {
+    "path": "biophysics/mechanism_analysis_20261027",
+    "change": "Retain the original relative directory name and required first-pass input tables and extension archives."
+  },
+  {
+    "path": "paper/support_plotting/source/render_integrated_figures.py",
+    "change": "Apply the approved final 4.1-inch compact layout and AUROC heading when regenerating Figure 4."
+  },
+  {
+    "path": "scripts/reproduce_figures.py",
+    "change": "Replay the approved final Figure 2 coordinate label and Figure 4 two-point upper margin. All 19 regenerated PDFs have identical text-token inventories and page dimensions to the submission figures."
+  }
+]

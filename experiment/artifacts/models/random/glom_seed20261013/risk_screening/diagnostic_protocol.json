@@ -1,0 +1,7 @@
+{
+  "analysis": "diagnostic assessment of already frozen policies; no refitting or selection",
+  "conditional_domain": "predicted brightness at least the fixed v13.5 thresholds 4.2 and 4.35",
+  "failure": "measured brightness below the same threshold",
+  "library_intervals": "interquartile spread across overlapping candidate subsets, not confidence intervals",
+  "all_candidate_libraries_reported": true
+}

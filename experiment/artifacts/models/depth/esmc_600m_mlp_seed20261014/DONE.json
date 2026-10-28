@@ -1,0 +1,10 @@
+{
+  "best_validation_spearman": 0.8042873175706954,
+  "feature": "esmc_600m",
+  "head": "mlp",
+  "seed": 20261014,
+  "split": "depth",
+  "selection": "validation Spearman",
+  "training_test_labels_read": false,
+  "best_epoch": 92
+}

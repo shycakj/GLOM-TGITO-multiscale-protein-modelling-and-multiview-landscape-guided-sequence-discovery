@@ -1,0 +1,10 @@
+{
+  "best_validation_spearman": 0.5463809873319867,
+  "feature": "saprot650_pred3di",
+  "head": "mlp",
+  "seed": 20261015,
+  "split": "random",
+  "selection": "validation Spearman",
+  "training_test_labels_read": false,
+  "best_epoch": 71
+}

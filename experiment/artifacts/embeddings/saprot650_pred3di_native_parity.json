@@ -1,0 +1,17 @@
+{
+  "relative_rms": 0.0029965222347527742,
+  "threshold": 0.02,
+  "tokens_per_sequence": 223,
+  "native_layers": 33,
+  "residue_dim": 1280,
+  "loading_check": {
+    "unused_missing_hf_parameters": [
+      "esm.contact_head.regression.bias",
+      "esm.contact_head.regression.weight",
+      "esm.embeddings.position_embeddings.weight"
+    ],
+    "missing_active_parameters": []
+  },
+  "unknown_tokens": 0,
+  "padding_3di_fraction": 0.0
+}

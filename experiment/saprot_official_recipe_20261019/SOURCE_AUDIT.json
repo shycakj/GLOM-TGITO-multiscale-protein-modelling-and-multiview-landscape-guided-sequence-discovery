@@ -1,0 +1,17 @@
+{
+  "no_external_adapter_loading": true,
+  "new_classifier_initialization_guard": true,
+  "zero_initialized_task_lora_guard": true,
+  "source_files": {
+    "build_trainer.py": "c4ca1ea068ffacbbc2569ccf1fc260e341650818967f4a035a0b375d4f9ec087",
+    "export_handoff.py": "d0e9a757aca5810ccd823869dde79416c6cba661a60f8eb17dcc355642b3e612",
+    "export_results.py": "92b7cfdb44757728d5035aef2883faad53216b5aceeafc9c5e3c00b3c2ac469e",
+    "gpu_preflight.py": "934336ef223379ce7cb4ea21e8d8da04e8f42618083e36c95378ca4d24462c95",
+    "model.py": "4d8168e26731d82e9cf10de654d68a137993e5829998e88f79c81b7ac117ffa0",
+    "prepare_protocol.py": "1d4a008169f4d9eda03d915a3209b345d54a2c596f5d8536536ddfbc803027a2",
+    "run_recipe_queue.py": "6e2c74aaef98b73daa092a9cceabba159aa97d4ed370b0fc2c620a12b8bdc8ec",
+    "scheduling_policy.py": "929fab5a9f3224611f32736d1a819250af42af46876cd3b663f99dcdae3ddb08",
+    "summarize_results.py": "7a1f297010aec713b3a769e1d31a029c80bb798cb1b97bbc8d639c7791d04a3c",
+    "train_official_recipe.py": "9896ce6c667cc7b8b1dc3da0adc881b6b27d1be04d621fc09771b2c7cbd8aba7"
+  }
+}

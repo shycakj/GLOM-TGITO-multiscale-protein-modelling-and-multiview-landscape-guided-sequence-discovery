@@ -1,0 +1,420 @@
+{
+  "checked_cst": "2026-10-14T09:37:20.751872+08:00",
+  "historical_winner": {
+    "mutation_budget": 2,
+    "num_restarts": 1,
+    "brightness_weight": 1.0,
+    "true_high_weight": 0.0,
+    "embedding_realism_weight": 0.0,
+    "embedding_repair_weight": 0.0,
+    "miner_weight": 0.0,
+    "budget_relative": "seed",
+    "terrain_gate_mode": "risk",
+    "proposal_order": 2,
+    "proposal_candidates": 64,
+    "seed_explore_min_change": 1.0,
+    "amp_dtype": "bf16",
+    "accept_by_objective": true,
+    "select_by_objective": true,
+    "novelty_min_hamming": 1,
+    "reject_known_output": true,
+    "terrain_weight": 0.04643036209710823,
+    "seed_explore_weight": 0.2224716471770466,
+    "lr": 0.03888462638924003,
+    "terrain_topk": 6,
+    "terrain_gate_temp": 0.20379784230558234,
+    "terrain_support_weight": 0.524977558024416,
+    "terrain_risk_weight": 0.7454479755392924,
+    "terrain_pred_gap_weight": 0.16544933340282295,
+    "terrain_source_quality_power": 0.866533060190367,
+    "proposal_every": 6,
+    "steps": 70,
+    "hpo_trial": 12,
+    "confirmation_mean": 0.20176290981085654,
+    "confirmation_std": 0.012691081680548609,
+    "protocol": "pplu-publication-v4-2026-09-02"
+  },
+  "trials_rows": 39,
+  "trial_states": {
+    "PRUNED": 31,
+    "COMPLETE": 5,
+    "FAIL": 3
+  },
+  "confirmation_top_trials": [
+    12,
+    30,
+    8,
+    22
+  ],
+  "best_vs_second_confirmation_gap": 0.00024215420693904366,
+  "frozen_vs_trial_csv_vs_confirmation_consistent": true,
+  "hpo_dimensions": 10,
+  "mismatched_hpo_dimensions": 9,
+  "parameter_diff": [
+    {
+      "parameter": "mutation_budget",
+      "section": "generator",
+      "field": "mutation_budget",
+      "historical": 2,
+      "effective": 2,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "num_restarts",
+      "section": "execution",
+      "field": "num_restarts",
+      "historical": 1,
+      "effective": 1,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "brightness_weight",
+      "section": "generator",
+      "field": "brightness_weight",
+      "historical": 1.0,
+      "effective": 1.0,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "true_high_weight",
+      "section": "terrain",
+      "field": "true_high_weight",
+      "historical": 0.0,
+      "effective": 0.0,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "embedding_realism_weight",
+      "section": "generator",
+      "field": "embedding_realism_weight",
+      "historical": 0.0,
+      "effective": 0.0,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "embedding_repair_weight",
+      "section": "generator",
+      "field": "embedding_repair_weight",
+      "historical": 0.0,
+      "effective": 0.0,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "miner_weight",
+      "section": "terrain",
+      "field": "miner_weight",
+      "historical": 0.0,
+      "effective": 0.0,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "budget_relative",
+      "section": "generator",
+      "field": "budget_relative",
+      "historical": "seed",
+      "effective": "seed",
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "terrain_gate_mode",
+      "section": "terrain",
+      "field": "terrain_gate_mode",
+      "historical": "risk",
+      "effective": "risk",
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "proposal_order",
+      "section": "generator",
+      "field": "proposal_order",
+      "historical": 2,
+      "effective": 2,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "proposal_candidates",
+      "section": "generator",
+      "field": "proposal_candidates",
+      "historical": 64,
+      "effective": 64,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "seed_explore_min_change",
+      "section": "generator",
+      "field": "seed_explore_min_change",
+      "historical": 1.0,
+      "effective": 1.0,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "amp_dtype",
+      "section": "generator",
+      "field": "amp_dtype",
+      "historical": "bf16",
+      "effective": "off",
+      "matches": false,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "accept_by_objective",
+      "section": "generator",
+      "field": "accept_by_objective",
+      "historical": true,
+      "effective": true,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "select_by_objective",
+      "section": "generator",
+      "field": "select_by_objective",
+      "historical": true,
+      "effective": true,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "novelty_min_hamming",
+      "section": "generator",
+      "field": "novelty_min_hamming",
+      "historical": 1,
+      "effective": 1,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "reject_known_output",
+      "section": "generator",
+      "field": "reject_known_output",
+      "historical": true,
+      "effective": true,
+      "matches": true,
+      "hpo_dimension": false
+    },
+    {
+      "parameter": "terrain_weight",
+      "section": "generator",
+      "field": "terrain_weight",
+      "historical": 0.04643036209710823,
+      "effective": 0.03,
+      "matches": false,
+      "hpo_dimension": true
+    },
+    {
+      "parameter": "seed_explore_weight",
+      "section": "generator",
+      "field": "seed_explore_weight",
+      "historical": 0.2224716471770466,
+      "effective": 0.2,
+      "matches": false,
+      "hpo_dimension": true
+    },
+    {
+      "parameter": "lr",
+      "section": "generator",
+      "field": "lr",
+      "historical": 0.03888462638924003,
+      "effective": 0.04,
+      "matches": false,
+      "hpo_dimension": true
+    },
+    {
+      "parameter": "terrain_topk",
+      "section": "terrain",
+      "field": "topk_sources",
+      "historical": 6,
+      "effective": 3,
+      "matches": false,
+      "hpo_dimension": true
+    },
+    {
+      "parameter": "terrain_gate_temp",
+      "section": "terrain",
+      "field": "terrain_gate_temp",
+      "historical": 0.20379784230558234,
+      "effective": 0.2,
+      "matches": false,
+      "hpo_dimension": true
+    },
+    {
+      "parameter": "terrain_support_weight",
+      "section": "terrain",
+      "field": "terrain_support_weight",
+      "historical": 0.524977558024416,
+      "effective": 0.45,
+      "matches": false,
+      "hpo_dimension": true
+    },
+    {
+      "parameter": "terrain_risk_weight",
+      "section": "terrain",
+      "field": "terrain_risk_weight",
+      "historical": 0.7454479755392924,
+      "effective": 0.65,
+      "matches": false,
+      "hpo_dimension": true
+    },
+    {
+      "parameter": "terrain_pred_gap_weight",
+      "section": "terrain",
+      "field": "terrain_pred_gap_weight",
+      "historical": 0.16544933340282295,
+      "effective": 0.2,
+      "matches": false,
+      "hpo_dimension": true
+    },
+    {
+      "parameter": "terrain_source_quality_power",
+      "section": "terrain",
+      "field": "terrain_source_quality_power",
+      "historical": 0.866533060190367,
+      "effective": 0.6,
+      "matches": false,
+      "hpo_dimension": true
+    },
+    {
+      "parameter": "proposal_every",
+      "section": "generator",
+      "field": "proposal_every",
+      "historical": 6,
+      "effective": 6,
+      "matches": true,
+      "hpo_dimension": true
+    },
+    {
+      "parameter": "steps",
+      "section": "generator",
+      "field": "steps",
+      "historical": 70,
+      "effective": 70,
+      "matches": true,
+      "hpo_dimension": false
+    }
+  ],
+  "legacy_hpo_overlap_current_split": {
+    "train": {
+      "legacy_hpo_target": 1316,
+      "legacy_hpo_start": 14
+    },
+    "validation": {
+      "legacy_hpo_target": 188,
+      "legacy_hpo_start": 1
+    },
+    "calibration": {
+      "legacy_hpo_target": 213,
+      "legacy_hpo_start": 5
+    },
+    "test": {
+      "legacy_hpo_target": 189,
+      "legacy_hpo_start": 4
+    }
+  },
+  "old_hidden400_sequences_in_legacy_hpo_terrain": 372,
+  "old_hpo_objective": {
+    "high_threshold": 4.2,
+    "max_hamming": 2,
+    "brightness_gamma": 1.5,
+    "weights": {
+      "treasure": 0.5,
+      "coverage": 0.2,
+      "predicted_gain": 0.2,
+      "diversity": 0.1
+    },
+    "distance_weights": {
+      "0": 1.0,
+      "1": 0.7,
+      "2": 0.4
+    },
+    "note": "Development-only target is legacy hidden_test after embargoing every new hidden400 sequence hash. This objective never opens final hidden400 labels."
+  },
+  "preserved_valid_checks": [
+    "Current predictor and risk config hashes equal completed run manifest",
+    "Canonical P4 cache/live agreement all 31480 rows; native ESM equivalence audited",
+    "Completed generation was multiterrain, but was not historical HPO winner"
+  ],
+  "findings": [
+    {
+      "id": "HPO_NOT_APPLIED",
+      "kind": "confirmed_error",
+      "detail": "Ten-dimensional frozen winner replaced by defaults plus a two-dimensional endpoint-ranking calibration."
+    },
+    {
+      "id": "PEAK_PRIOR",
+      "kind": "protocol_difference",
+      "detail": "Current plan uses historical nonuniform source prior and different peak score; neutral prior must be judged from provenance/current development evidence, not restored blindly."
+    },
+    {
+      "id": "GATE_TRAINING",
+      "kind": "protocol_difference",
+      "detail": "Current MLP fits train-memory labels; source quality uses calibration queries. Historical v4 fits tune300 with OOF quality. Not the same experiment; not evidence by itself of test leakage."
+    },
+    {
+      "id": "MODEL_AND_INPUT",
+      "kind": "intentional_correction",
+      "detail": "Fresh predictor, canonical P4, native ESM correction and corrected hard objective differ from legacy HPO setup. Keep verified corrections; historical optimum is not established for this new setup."
+    },
+    {
+      "id": "HPO_LABEL_ANCESTRY",
+      "kind": "verified_overlap",
+      "detail": "Historical HPO target intersects current test; old terrain also contains 372 old hidden400 sequences. Do not call HPO lineage independent of these labels."
+    },
+    {
+      "id": "RANKING_NOT_HPO",
+      "kind": "interpretation",
+      "detail": "35/25/20/15/5 confidence weights are historical selection constants, not the ten HPO dimensions."
+    },
+    {
+      "id": "REPLICATES",
+      "kind": "scope",
+      "detail": "900 peaks x 3 roles are one search replicate with 2700 contexts/1277 unique starts; two cross-scoring seeds are not search repeats."
+    },
+    {
+      "id": "RESUME_IDENTITY",
+      "kind": "execution_gap",
+      "detail": "Existing full runner does not recheck all model/terrain/risk hashes at each worker start/resume. New execution must bind effective parameters and every input hash to outputs."
+    },
+    {
+      "id": "EVIDENCE_GAP",
+      "kind": "scope",
+      "detail": "No revised full-pipeline baseline comparison completed. Cross-model scores and fixed-backbone compatibility remain computational evidence, not generated-sequence measurements."
+    }
+  ],
+  "decision": {
+    "retrain_predictors": false,
+    "rerun_embedding_cache": false,
+    "restart_affected_search_trajectories": true,
+    "posthoc_rerank_cannot_repair_search": true,
+    "rerun_original_hpo_study_blindly": false,
+    "next": "Small predeclared paired verification including historical winner; freeze corrected development objective before any new HPO; then launch new output version."
+  },
+  "configuration_contract_checks": [
+    "completed_run_rejected",
+    "topk_overwrite_rejected",
+    "unknown_parameter_rejected",
+    "historical_reference_all_fields_match",
+    "explicit_precision_override_validated"
+  ],
+  "source_hashes": {
+    "handoff_20261001/repro_project/artifacts/tgito_hpo/FROZEN_TGITO_PARAMS.json": "129297379b08852d26cd954297cff5ee3525ff0b63ad0fbac039790bce478609",
+    "handoff_20261001/repro_project/artifacts/tgito_hpo/trials.csv": "991c33b02813d849fdf717bb3dd05befddf51b1e4f2a0e18d14f7c222c96b704",
+    "handoff_20261001/repro_project/artifacts/tgito_hpo/confirmation.json": "1cc43431c23b68312d47764ad8d3a7c4a9aae81e781c8725c118bc52ee29662b",
+    "handoff_20261001/repro_project/configs/publication_experiment.json": "26044119493ccd29ebe4f444c47f4a99a5979e54224b8ab831654fd1d7124866",
+    "experiments_20261013/artifacts/models/random/glom_seed20261013/full_discovery_v2/PROTOCOL.json": "97bd0929e6636ec563d71a46ebe8e6cd9b8a25923939cb51a6f484a95851acc6",
+    "experiments_20261013/artifacts/models/random/glom_seed20261013/risk_calibration/FROZEN_CONFIG.json": "72a3bcd0d4b96fd98a849b970d343d3384fc5b30e76b973922ac4a7d67c5bab1",
+    "experiments_20261013/build_wide_peak_plan.py": "3f5c61856aa724a59538285c08f99351168aa6030c787e2e05f655ef47e233f0",
+    "experiments_20261013/build_train_terrain.py": "e13f09c4e59cdc2aa12b31718c69190b5bbb4af149016ff92f46f57fbc611447"
+  }
+}

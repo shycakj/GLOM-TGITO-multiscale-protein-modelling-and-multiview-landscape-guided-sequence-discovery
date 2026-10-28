@@ -1,0 +1,86 @@
+{
+  "created": "2026-10-19",
+  "experiment": "saprot_baseline_20261019",
+  "remote_root": "/xiongyuchen/gfp_evidence_20261013",
+  "model_repo": "westlake-repl/SaProt_650M_AF2",
+  "model_revision": "d9b9ad00ef61c0990e611b2b43f2231c7de24b38",
+  "feature": "saprot650_pred3di",
+  "structural_input": "Frozen existing ESM2-150M/Bridge argmax 3Di; checkpoint vocabulary; padding state maps to #",
+  "bridge_sha256": "1dcc0d4031184d300c3fd1f8e0fd956626947fd81d71f65265c4474b5bcbb292",
+  "splits": [
+    "random",
+    "depth"
+  ],
+  "seeds": [
+    20261013,
+    20261014,
+    20261015
+  ],
+  "data_hashes": {
+    "calibration.csv": "02e2e41bf0a86d8c6d3f80538b9d33b873b72a0c39f2dd5e488b55792309fcb0",
+    "depth_extrapolation.csv": "d11e84f90f644721a9030e340a149554be35be51f7a844a55db0ab4a5ca9657b",
+    "test.csv": "c7712cc892062c6a0826ce1ac6e1a8a9484c65c3e487104a3634d1e8306933e4",
+    "train.csv": "b446cf405d392322a80037245b8c303b8e3cad4ab24e3b30d94a2f434cdf5d3c",
+    "unique_sequences.csv": "46ba8dd4e1674e00f08e6c6ca0961cd1959198c7f90011b4f7ebcbcada0e5611",
+    "validation.csv": "b360b42002f8cde23f9c10118a16af15cee72488b3fe23ff2eff7b51362d47d1"
+  },
+  "partition_counts": {
+    "train": 22003,
+    "test": 3144,
+    "validation": 3144,
+    "calibration": 3143
+  },
+  "depth_counts": {
+    "test": 14280,
+    "train": 13723,
+    "calibration": 1716,
+    "validation": 1715
+  },
+  "frozen_head": {
+    "source": "train_cached_heads.py",
+    "head": "mlp",
+    "pooling": "mean of residues, excluding specials",
+    "epochs_limit": 200,
+    "patience": 20,
+    "lr": 0.001
+  },
+  "lora": {
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "targets": [
+      "query",
+      "value"
+    ],
+    "lr": 0.0001,
+    "epochs_limit": 25,
+    "patience": 6,
+    "effective_batch": 64,
+    "loss": "training-standardized Huber",
+    "head": "LayerNorm(1280), Linear(1280,256), GELU, Dropout(.1), Linear(256,1)"
+  },
+  "selection": "validation Spearman, fixed in advance; no test feedback",
+  "primary_metrics": [
+    "rmse",
+    "mae",
+    "r2",
+    "spearman"
+  ],
+  "secondary_metrics": [
+    "pearson",
+    "measured_top6_30_100",
+    "high420",
+    "high435",
+    "top10pct_enrichment"
+  ],
+  "baseline_scope": "Native SaProt prediction baselines, not a TGITO ablation",
+  "native_saprot_not_bridge_surrogate": true,
+  "no_p4_or_glom_local_branches_in_saprot": true,
+  "existing_results_unchanged": true,
+  "source_hashes": {
+    "train_cached_heads.py": "e98b144ae119e1547b5be7dfec47d3ec4a204442687c88cb08f1b049ddda4d63",
+    "train_plm_lora.py": "2d213aca848c4b3eac3f14c6cd423aaad6edb22ce5dedb9025ccac9a45046bfc",
+    "experiment_core.py": "2aebc1b78784256e8d5ebda409fccfd1d7ca57b1c47f6809304e310a232ffc81",
+    "encoder_contract.py": "beee91dfc59404152427edb06e86687d961520255fc17070a5db5ca5a80effc7"
+  }
+}

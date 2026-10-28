@@ -1,0 +1,11 @@
+{
+  "source": "keysite_K_flat",
+  "calibration_auc": 0.8541032686304054,
+  "calibration_ap": 0.26923624549464736,
+  "calibration_top60_high435": 0.36666666666666664,
+  "source_quality": 0.7078722880412838,
+  "memory_n": 22003,
+  "calibration_n": 3143,
+  "test_labels_read": false,
+  "quality_features_use_query_true_label": false
+}

@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": 0,
+      "flat_ties": false,
+      "preexisting_mutations": false,
+      "restricted_sites": false,
+      "ordered_candidates_identical": true,
+      "accepted_logits_identical": true,
+      "native_seconds": 58.415731225628406,
+      "fast_seconds": 0.258818241301924
+    },
+    {
+      "case": 1,
+      "flat_ties": true,
+      "preexisting_mutations": false,
+      "restricted_sites": true,
+      "ordered_candidates_identical": true,
+      "accepted_logits_identical": true,
+      "native_seconds": 43.86393484426662,
+      "fast_seconds": 0.1078582750633359
+    },
+    {
+      "case": 2,
+      "flat_ties": false,
+      "preexisting_mutations": true,
+      "restricted_sites": true,
+      "ordered_candidates_identical": true,
+      "accepted_logits_identical": true,
+      "native_seconds": 3.188156634103507,
+      "fast_seconds": 0.03004665020853281
+    }
+  ]
+}

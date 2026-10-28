@@ -1,0 +1,21 @@
+{
+  "memory_partition": "train",
+  "quality_partition": "calibration",
+  "umap_fit_partition": "train",
+  "test_labels_read": false,
+  "memory_n": 22003,
+  "sources": [
+    "global_attn_pool",
+    "global_mean_pool",
+    "global_max_pool",
+    "region9_max_pool",
+    "region9_mean_pool",
+    "region_win_165_174_all_mut512",
+    "region_win_77_86_all_mut512",
+    "keysite_K_flat",
+    "region_win_97_106_all_mut512",
+    "region_win_27_36_all_mut512",
+    "region_win_55_64_all_mut512",
+    "sequence"
+  ]
+}

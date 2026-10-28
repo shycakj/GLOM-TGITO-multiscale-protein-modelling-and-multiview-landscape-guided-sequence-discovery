@@ -1,0 +1,5 @@
+{
+  "wt_H_rmse": 0.0008358049672096968,
+  "wt_H_max_absolute_difference": 0.03858137130737305,
+  "reference": "CPU float32 original ESM/Bridge on identical WT"
+}

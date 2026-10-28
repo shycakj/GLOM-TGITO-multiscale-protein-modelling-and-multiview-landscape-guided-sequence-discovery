@@ -1,0 +1,27 @@
+{
+  "best_validation_spearman": 0.5094077302544221,
+  "epochs": 25,
+  "config": {
+    "root": "/xiongyuchen/gfp_evidence_20261013",
+    "seed": 20261013,
+    "epochs": 25,
+    "patience": 6,
+    "batch_size": 16,
+    "accumulation": 4,
+    "lr": 0.0001,
+    "rank": 16,
+    "smoke": false,
+    "split": "depth",
+    "parameters": 654277014,
+    "trainable_parameters": 3034113,
+    "method": "Native SaProt-650M with predicted 3Di + supervised LoRA",
+    "input_features": "native 221 AA+3Di tokens; no GLOM mutation or local branches",
+    "protocol_sha256": "964b37948b2a5299092784178648df4c73e39eaba6121485fb7ac55209065111",
+    "model_revision": "d9b9ad00ef61c0990e611b2b43f2231c7de24b38",
+    "selection": "validation Spearman",
+    "loss": "standardized Huber",
+    "amp": "bf16",
+    "training_test_labels_read": false,
+    "checkpoint_origin": "public pretrained, no GFP labels"
+  }
+}

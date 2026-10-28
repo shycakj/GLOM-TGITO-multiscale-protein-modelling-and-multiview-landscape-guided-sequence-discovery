@@ -1,0 +1,25 @@
+{
+  "rows": 31480,
+  "shape": [
+    31480,
+    221,
+    4
+  ],
+  "columns": [
+    "mutation_flag",
+    "mutant_hydrophobic",
+    "mutant_polar",
+    "mutant_charged"
+  ],
+  "definition_source": "pipeline/glom_model/train_pplu_full_model.py, AAP and P_all construction",
+  "history_finding": "pplu_pmutation_p4 was built for v12.5 miner on 2026-06-26; it encodes full-residue hydrophobic/polar flags with final column zero, not original GLOM inputs",
+  "old_cache_different_entries_by_column": [
+    0,
+    2680035,
+    2085336,
+    18061
+  ],
+  "live_vs_cached_max_difference_all_31480": 0.0,
+  "sha256": "ed27625822e345e05f3657f2291daed9604e286eaec4c871bc7ad841098b3842",
+  "brightness_labels_read": false
+}

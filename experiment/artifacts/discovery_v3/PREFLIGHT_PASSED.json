@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "records": 216,
+  "baseline_records": 24,
+  "primary_profile": "trial12",
+  "primary_valid_fraction": 0.9027777777777778,
+  "no_test_or_evaluator_feedback": true,
+  "protocol_sha256": "a63a2ecd710c256e3dc9c29e4db5f061099c1f99431f35aed6eef17caf157a70",
+  "max_reserved_gib": 2.939453125,
+  "median_context_seconds": 23.453389746136963,
+  "criterion": "Implementation and feasibility only; historical winner is not reselected by predicted or measured test brightness"
+}

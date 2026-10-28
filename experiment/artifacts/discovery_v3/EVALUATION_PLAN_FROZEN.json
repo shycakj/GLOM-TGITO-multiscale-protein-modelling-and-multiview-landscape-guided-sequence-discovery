@@ -1,0 +1,36 @@
+{
+  "unix_time": 1791945888.7413263,
+  "generation_protocol_sha256": "a63a2ecd710c256e3dc9c29e4db5f061099c1f99431f35aed6eef17caf157a70",
+  "evaluation_source_sha256": "29eb3dc50e9200e48387ff239dddaf4d2167f5cfc9966340636670abe175bb9f",
+  "input_hashes": {
+    "audit/structure_validation/reference_backbone.npz": "34757f93323d7d9058049252b285e2e3984ae1da40bee765e85e0b727ab4e036",
+    "audit/structure_validation/REFERENCE_MAPPING.json": "f78e3a81bdcee6f8bdf2ce732ad0c1c017738f0c80e27970fa69d3bf28bc1f87",
+    "third_party/ProteinMPNN/protein_mpnn_utils.py": "74c8f9b7553422a7a0bbd705874844ee103c8926c2c96f154a87e0b824071e1b",
+    "third_party/ProteinMPNN/vanilla_model_weights/v_48_020.pt": "c9cb4a671d79604111231f8dbfc7c590e06f1197453b7a6854ac6661a642f5bd",
+    "validate_structure_evidence.py": "60899aae703463d7b59cfeeff41364d77f5b1cd25eeb43a682f6bcb96f62a38a",
+    "data/calibration.csv": "02e2e41bf0a86d8c6d3f80538b9d33b873b72a0c39f2dd5e488b55792309fcb0",
+    "data/test.csv": "c7712cc892062c6a0826ce1ac6e1a8a9484c65c3e487104a3634d1e8306933e4",
+    "data/train.csv": "b446cf405d392322a80037245b8c303b8e3cad4ab24e3b30d94a2f434cdf5d3c",
+    "artifacts/models/random/glom_seed20261013/best.pt": "c677ede771d30656d9c93970a9620b16d117e7cc09174468a1bab8a42d32df14",
+    "artifacts/models/random/glom_seed20261014/best.pt": "fd6816a9da6a1264426a13db070c2fb0438b6077fe998c85baa4d6a8843d1e53",
+    "artifacts/models/random/glom_seed20261015/best.pt": "1d22b6d0f2f225a978b45343ebea5d5ddc71247c187e045e1693df740a7a1221",
+    "artifacts/models/random/esm2_650m_mlp_seed20261013/best.pt": "a94ea0d482af3d4bd2f90a984897b529701215b7ddbb0d42f5da2fa45f79a9da",
+    "artifacts/models/random/esm2_650m_mlp_seed20261014/best.pt": "d6d48262de489c18c813124f69d6225430456a0ae1ea35be30839ecf2af3677a",
+    "artifacts/models/random/esm2_650m_mlp_seed20261015/best.pt": "57fec1b56c72e107b1d37d634ecfbba02ce813917cc0394bf45845ca0c24c5e2"
+  },
+  "metrics": [
+    "Native frozen Top6/30/100 batch size",
+    "Cross-seed prediction means and gains relative to starts",
+    "Novelty and Hamming diversity",
+    "Measured-test RMSE, R2, Spearman, overall/high-fitness/nearest-training distance",
+    "Empirical calibration error envelope and measured-test coverage",
+    "Complete confidence screening versus predictor-only screening on heldout measured libraries",
+    "ProteinMPNN fixed-backbone compatibility and scored residue coverage"
+  ],
+  "labels_are_not_inferred_from_catalogue_absence": true,
+  "rankings_are_not_changed_after_judge_scores": true,
+  "lower_envelope_is_not_a_coverage_guarantee_for_optimized_sequences": true,
+  "trial12_is_historical_hpo_transfer_not_a_newly_selected_optimum": true,
+  "campaign_repetitions": 1,
+  "overlapping_measured_library_subsets_are_not_independent_campaigns": true
+}

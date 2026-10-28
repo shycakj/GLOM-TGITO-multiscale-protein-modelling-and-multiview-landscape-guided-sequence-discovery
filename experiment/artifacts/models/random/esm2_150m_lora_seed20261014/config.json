@@ -1,0 +1,20 @@
+{
+  "root": "/root/gfp_evidence_20261013",
+  "seed": 20261014,
+  "epochs": 25,
+  "patience": 6,
+  "batch_size": 32,
+  "accumulation": 2,
+  "lr": 0.0001,
+  "rank": 16,
+  "smoke": false,
+  "split": "random",
+  "parameters": 149779674,
+  "trainable_parameters": 1394433,
+  "method": "ESM2-150M + supervised LoRA",
+  "selection": "validation Spearman",
+  "loss": "standardized Huber",
+  "amp": "bf16",
+  "training_test_labels_read": false,
+  "checkpoint_origin": "public pretrained, no GFP labels"
+}

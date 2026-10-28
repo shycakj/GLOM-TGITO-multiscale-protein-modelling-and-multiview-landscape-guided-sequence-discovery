@@ -1,0 +1,11 @@
+{
+  "prediction_floor": 4.31,
+  "minimum_pairwise_hamming": 2,
+  "requested_candidates": 6,
+  "source": "LL_GF/v13_working_code/scripts_v13_5/04_confidence_and_select_candidates.ps1 calls modal_v13_2_candidate_confidence.py with its defaults",
+  "normalization": "all candidates in the unlabeled pool, before filtering, matching original code",
+  "novelty": "all evaluated sequences belong to hidden test/calibration libraries; the current library is not in training memory",
+  "comparison": "all rankings use the same GLOM eligibility rule and pairwise-distance constraint",
+  "earlier_unfiltered_analysis": "retained as score-component diagnostics; not replaced",
+  "parameter_selection": "no new tuning; both fixed and already frozen calibration-selected terrain policies reported"
+}

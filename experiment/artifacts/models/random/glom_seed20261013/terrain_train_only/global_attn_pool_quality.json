@@ -1,0 +1,11 @@
+{
+  "source": "global_attn_pool",
+  "calibration_auc": 0.8302508346382249,
+  "calibration_ap": 0.28405495247028817,
+  "calibration_top60_high435": 0.35,
+  "source_quality": 0.6861755842467574,
+  "memory_n": 22003,
+  "calibration_n": 3143,
+  "test_labels_read": false,
+  "quality_features_use_query_true_label": false
+}

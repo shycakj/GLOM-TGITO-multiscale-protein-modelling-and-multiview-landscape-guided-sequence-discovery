@@ -1,0 +1,1085 @@
+{
+  "pdb": "2G3O",
+  "chain": "A",
+  "source_sha256": "2f2198d5dfe9da501374a8cb2fd426da0ad0ceea691f09bd694ffa49da843ba7",
+  "exact_reference_length": 221,
+  "matched_regular_residues": 211,
+  "backbone_scored_residues": 211,
+  "excluded_positions": [
+    1,
+    56,
+    57,
+    58,
+    185,
+    186,
+    218,
+    219,
+    220,
+    221
+  ],
+  "chromophore_wt_positions": [
+    56,
+    57,
+    58
+  ],
+  "chromophore_sequence": "GYG",
+  "mapping": [
+    {
+      "wt_position": 2,
+      "pdb_auth_position": 3,
+      "residue": "A"
+    },
+    {
+      "wt_position": 3,
+      "pdb_auth_position": 4,
+      "residue": "M"
+    },
+    {
+      "wt_position": 4,
+      "pdb_auth_position": 5,
+      "residue": "K"
+    },
+    {
+      "wt_position": 5,
+      "pdb_auth_position": 6,
+      "residue": "I"
+    },
+    {
+      "wt_position": 6,
+      "pdb_auth_position": 7,
+      "residue": "E"
+    },
+    {
+      "wt_position": 7,
+      "pdb_auth_position": 8,
+      "residue": "C"
+    },
+    {
+      "wt_position": 8,
+      "pdb_auth_position": 9,
+      "residue": "R"
+    },
+    {
+      "wt_position": 9,
+      "pdb_auth_position": 10,
+      "residue": "I"
+    },
+    {
+      "wt_position": 10,
+      "pdb_auth_position": 11,
+      "residue": "T"
+    },
+    {
+      "wt_position": 11,
+      "pdb_auth_position": 12,
+      "residue": "G"
+    },
+    {
+      "wt_position": 12,
+      "pdb_auth_position": 13,
+      "residue": "T"
+    },
+    {
+      "wt_position": 13,
+      "pdb_auth_position": 14,
+      "residue": "L"
+    },
+    {
+      "wt_position": 14,
+      "pdb_auth_position": 15,
+      "residue": "N"
+    },
+    {
+      "wt_position": 15,
+      "pdb_auth_position": 16,
+      "residue": "G"
+    },
+    {
+      "wt_position": 16,
+      "pdb_auth_position": 17,
+      "residue": "V"
+    },
+    {
+      "wt_position": 17,
+      "pdb_auth_position": 18,
+      "residue": "E"
+    },
+    {
+      "wt_position": 18,
+      "pdb_auth_position": 19,
+      "residue": "F"
+    },
+    {
+      "wt_position": 19,
+      "pdb_auth_position": 20,
+      "residue": "E"
+    },
+    {
+      "wt_position": 20,
+      "pdb_auth_position": 21,
+      "residue": "L"
+    },
+    {
+      "wt_position": 21,
+      "pdb_auth_position": 22,
+      "residue": "V"
+    },
+    {
+      "wt_position": 22,
+      "pdb_auth_position": 23,
+      "residue": "G"
+    },
+    {
+      "wt_position": 23,
+      "pdb_auth_position": 24,
+      "residue": "G"
+    },
+    {
+      "wt_position": 24,
+      "pdb_auth_position": 25,
+      "residue": "G"
+    },
+    {
+      "wt_position": 25,
+      "pdb_auth_position": 26,
+      "residue": "E"
+    },
+    {
+      "wt_position": 26,
+      "pdb_auth_position": 27,
+      "residue": "G"
+    },
+    {
+      "wt_position": 27,
+      "pdb_auth_position": 28,
+      "residue": "T"
+    },
+    {
+      "wt_position": 28,
+      "pdb_auth_position": 29,
+      "residue": "P"
+    },
+    {
+      "wt_position": 29,
+      "pdb_auth_position": 30,
+      "residue": "E"
+    },
+    {
+      "wt_position": 30,
+      "pdb_auth_position": 31,
+      "residue": "Q"
+    },
+    {
+      "wt_position": 31,
+      "pdb_auth_position": 32,
+      "residue": "G"
+    },
+    {
+      "wt_position": 32,
+      "pdb_auth_position": 33,
+      "residue": "R"
+    },
+    {
+      "wt_position": 33,
+      "pdb_auth_position": 34,
+      "residue": "M"
+    },
+    {
+      "wt_position": 34,
+      "pdb_auth_position": 35,
+      "residue": "T"
+    },
+    {
+      "wt_position": 35,
+      "pdb_auth_position": 36,
+      "residue": "N"
+    },
+    {
+      "wt_position": 36,
+      "pdb_auth_position": 37,
+      "residue": "K"
+    },
+    {
+      "wt_position": 37,
+      "pdb_auth_position": 38,
+      "residue": "M"
+    },
+    {
+      "wt_position": 38,
+      "pdb_auth_position": 39,
+      "residue": "K"
+    },
+    {
+      "wt_position": 39,
+      "pdb_auth_position": 40,
+      "residue": "S"
+    },
+    {
+      "wt_position": 40,
+      "pdb_auth_position": 41,
+      "residue": "T"
+    },
+    {
+      "wt_position": 41,
+      "pdb_auth_position": 42,
+      "residue": "K"
+    },
+    {
+      "wt_position": 42,
+      "pdb_auth_position": 43,
+      "residue": "G"
+    },
+    {
+      "wt_position": 43,
+      "pdb_auth_position": 44,
+      "residue": "A"
+    },
+    {
+      "wt_position": 44,
+      "pdb_auth_position": 45,
+      "residue": "L"
+    },
+    {
+      "wt_position": 45,
+      "pdb_auth_position": 46,
+      "residue": "T"
+    },
+    {
+      "wt_position": 46,
+      "pdb_auth_position": 47,
+      "residue": "F"
+    },
+    {
+      "wt_position": 47,
+      "pdb_auth_position": 48,
+      "residue": "S"
+    },
+    {
+      "wt_position": 48,
+      "pdb_auth_position": 49,
+      "residue": "P"
+    },
+    {
+      "wt_position": 49,
+      "pdb_auth_position": 50,
+      "residue": "Y"
+    },
+    {
+      "wt_position": 50,
+      "pdb_auth_position": 51,
+      "residue": "L"
+    },
+    {
+      "wt_position": 51,
+      "pdb_auth_position": 52,
+      "residue": "L"
+    },
+    {
+      "wt_position": 52,
+      "pdb_auth_position": 53,
+      "residue": "S"
+    },
+    {
+      "wt_position": 53,
+      "pdb_auth_position": 54,
+      "residue": "H"
+    },
+    {
+      "wt_position": 54,
+      "pdb_auth_position": 55,
+      "residue": "V"
+    },
+    {
+      "wt_position": 55,
+      "pdb_auth_position": 56,
+      "residue": "M"
+    },
+    {
+      "wt_position": 59,
+      "pdb_auth_position": 60,
+      "residue": "F"
+    },
+    {
+      "wt_position": 60,
+      "pdb_auth_position": 61,
+      "residue": "Y"
+    },
+    {
+      "wt_position": 61,
+      "pdb_auth_position": 62,
+      "residue": "H"
+    },
+    {
+      "wt_position": 62,
+      "pdb_auth_position": 63,
+      "residue": "F"
+    },
+    {
+      "wt_position": 63,
+      "pdb_auth_position": 64,
+      "residue": "G"
+    },
+    {
+      "wt_position": 64,
+      "pdb_auth_position": 65,
+      "residue": "T"
+    },
+    {
+      "wt_position": 65,
+      "pdb_auth_position": 66,
+      "residue": "Y"
+    },
+    {
+      "wt_position": 66,
+      "pdb_auth_position": 67,
+      "residue": "P"
+    },
+    {
+      "wt_position": 67,
+      "pdb_auth_position": 68,
+      "residue": "S"
+    },
+    {
+      "wt_position": 68,
+      "pdb_auth_position": 69,
+      "residue": "G"
+    },
+    {
+      "wt_position": 69,
+      "pdb_auth_position": 70,
+      "residue": "Y"
+    },
+    {
+      "wt_position": 70,
+      "pdb_auth_position": 71,
+      "residue": "E"
+    },
+    {
+      "wt_position": 71,
+      "pdb_auth_position": 72,
+      "residue": "N"
+    },
+    {
+      "wt_position": 72,
+      "pdb_auth_position": 73,
+      "residue": "P"
+    },
+    {
+      "wt_position": 73,
+      "pdb_auth_position": 74,
+      "residue": "F"
+    },
+    {
+      "wt_position": 74,
+      "pdb_auth_position": 75,
+      "residue": "L"
+    },
+    {
+      "wt_position": 75,
+      "pdb_auth_position": 76,
+      "residue": "H"
+    },
+    {
+      "wt_position": 76,
+      "pdb_auth_position": 77,
+      "residue": "A"
+    },
+    {
+      "wt_position": 77,
+      "pdb_auth_position": 78,
+      "residue": "I"
+    },
+    {
+      "wt_position": 78,
+      "pdb_auth_position": 79,
+      "residue": "N"
+    },
+    {
+      "wt_position": 79,
+      "pdb_auth_position": 80,
+      "residue": "N"
+    },
+    {
+      "wt_position": 80,
+      "pdb_auth_position": 81,
+      "residue": "G"
+    },
+    {
+      "wt_position": 81,
+      "pdb_auth_position": 82,
+      "residue": "G"
+    },
+    {
+      "wt_position": 82,
+      "pdb_auth_position": 83,
+      "residue": "Y"
+    },
+    {
+      "wt_position": 83,
+      "pdb_auth_position": 84,
+      "residue": "T"
+    },
+    {
+      "wt_position": 84,
+      "pdb_auth_position": 85,
+      "residue": "N"
+    },
+    {
+      "wt_position": 85,
+      "pdb_auth_position": 86,
+      "residue": "T"
+    },
+    {
+      "wt_position": 86,
+      "pdb_auth_position": 87,
+      "residue": "R"
+    },
+    {
+      "wt_position": 87,
+      "pdb_auth_position": 88,
+      "residue": "I"
+    },
+    {
+      "wt_position": 88,
+      "pdb_auth_position": 89,
+      "residue": "E"
+    },
+    {
+      "wt_position": 89,
+      "pdb_auth_position": 90,
+      "residue": "K"
+    },
+    {
+      "wt_position": 90,
+      "pdb_auth_position": 91,
+      "residue": "Y"
+    },
+    {
+      "wt_position": 91,
+      "pdb_auth_position": 92,
+      "residue": "E"
+    },
+    {
+      "wt_position": 92,
+      "pdb_auth_position": 93,
+      "residue": "D"
+    },
+    {
+      "wt_position": 93,
+      "pdb_auth_position": 94,
+      "residue": "G"
+    },
+    {
+      "wt_position": 94,
+      "pdb_auth_position": 95,
+      "residue": "G"
+    },
+    {
+      "wt_position": 95,
+      "pdb_auth_position": 96,
+      "residue": "V"
+    },
+    {
+      "wt_position": 96,
+      "pdb_auth_position": 97,
+      "residue": "L"
+    },
+    {
+      "wt_position": 97,
+      "pdb_auth_position": 98,
+      "residue": "H"
+    },
+    {
+      "wt_position": 98,
+      "pdb_auth_position": 99,
+      "residue": "V"
+    },
+    {
+      "wt_position": 99,
+      "pdb_auth_position": 100,
+      "residue": "S"
+    },
+    {
+      "wt_position": 100,
+      "pdb_auth_position": 101,
+      "residue": "F"
+    },
+    {
+      "wt_position": 101,
+      "pdb_auth_position": 102,
+      "residue": "S"
+    },
+    {
+      "wt_position": 102,
+      "pdb_auth_position": 103,
+      "residue": "Y"
+    },
+    {
+      "wt_position": 103,
+      "pdb_auth_position": 104,
+      "residue": "R"
+    },
+    {
+      "wt_position": 104,
+      "pdb_auth_position": 105,
+      "residue": "Y"
+    },
+    {
+      "wt_position": 105,
+      "pdb_auth_position": 106,
+      "residue": "E"
+    },
+    {
+      "wt_position": 106,
+      "pdb_auth_position": 107,
+      "residue": "A"
+    },
+    {
+      "wt_position": 107,
+      "pdb_auth_position": 108,
+      "residue": "G"
+    },
+    {
+      "wt_position": 108,
+      "pdb_auth_position": 109,
+      "residue": "R"
+    },
+    {
+      "wt_position": 109,
+      "pdb_auth_position": 110,
+      "residue": "V"
+    },
+    {
+      "wt_position": 110,
+      "pdb_auth_position": 111,
+      "residue": "I"
+    },
+    {
+      "wt_position": 111,
+      "pdb_auth_position": 112,
+      "residue": "G"
+    },
+    {
+      "wt_position": 112,
+      "pdb_auth_position": 113,
+      "residue": "D"
+    },
+    {
+      "wt_position": 113,
+      "pdb_auth_position": 114,
+      "residue": "F"
+    },
+    {
+      "wt_position": 114,
+      "pdb_auth_position": 115,
+      "residue": "K"
+    },
+    {
+      "wt_position": 115,
+      "pdb_auth_position": 116,
+      "residue": "V"
+    },
+    {
+      "wt_position": 116,
+      "pdb_auth_position": 117,
+      "residue": "V"
+    },
+    {
+      "wt_position": 117,
+      "pdb_auth_position": 118,
+      "residue": "G"
+    },
+    {
+      "wt_position": 118,
+      "pdb_auth_position": 119,
+      "residue": "T"
+    },
+    {
+      "wt_position": 119,
+      "pdb_auth_position": 120,
+      "residue": "G"
+    },
+    {
+      "wt_position": 120,
+      "pdb_auth_position": 121,
+      "residue": "F"
+    },
+    {
+      "wt_position": 121,
+      "pdb_auth_position": 122,
+      "residue": "P"
+    },
+    {
+      "wt_position": 122,
+      "pdb_auth_position": 123,
+      "residue": "E"
+    },
+    {
+      "wt_position": 123,
+      "pdb_auth_position": 124,
+      "residue": "D"
+    },
+    {
+      "wt_position": 124,
+      "pdb_auth_position": 125,
+      "residue": "S"
+    },
+    {
+      "wt_position": 125,
+      "pdb_auth_position": 126,
+      "residue": "V"
+    },
+    {
+      "wt_position": 126,
+      "pdb_auth_position": 127,
+      "residue": "I"
+    },
+    {
+      "wt_position": 127,
+      "pdb_auth_position": 128,
+      "residue": "F"
+    },
+    {
+      "wt_position": 128,
+      "pdb_auth_position": 129,
+      "residue": "T"
+    },
+    {
+      "wt_position": 129,
+      "pdb_auth_position": 130,
+      "residue": "D"
+    },
+    {
+      "wt_position": 130,
+      "pdb_auth_position": 131,
+      "residue": "K"
+    },
+    {
+      "wt_position": 131,
+      "pdb_auth_position": 132,
+      "residue": "I"
+    },
+    {
+      "wt_position": 132,
+      "pdb_auth_position": 133,
+      "residue": "I"
+    },
+    {
+      "wt_position": 133,
+      "pdb_auth_position": 134,
+      "residue": "R"
+    },
+    {
+      "wt_position": 134,
+      "pdb_auth_position": 135,
+      "residue": "S"
+    },
+    {
+      "wt_position": 135,
+      "pdb_auth_position": 136,
+      "residue": "N"
+    },
+    {
+      "wt_position": 136,
+      "pdb_auth_position": 137,
+      "residue": "A"
+    },
+    {
+      "wt_position": 137,
+      "pdb_auth_position": 138,
+      "residue": "T"
+    },
+    {
+      "wt_position": 138,
+      "pdb_auth_position": 139,
+      "residue": "V"
+    },
+    {
+      "wt_position": 139,
+      "pdb_auth_position": 140,
+      "residue": "E"
+    },
+    {
+      "wt_position": 140,
+      "pdb_auth_position": 141,
+      "residue": "H"
+    },
+    {
+      "wt_position": 141,
+      "pdb_auth_position": 142,
+      "residue": "L"
+    },
+    {
+      "wt_position": 142,
+      "pdb_auth_position": 143,
+      "residue": "H"
+    },
+    {
+      "wt_position": 143,
+      "pdb_auth_position": 144,
+      "residue": "P"
+    },
+    {
+      "wt_position": 144,
+      "pdb_auth_position": 145,
+      "residue": "M"
+    },
+    {
+      "wt_position": 145,
+      "pdb_auth_position": 146,
+      "residue": "G"
+    },
+    {
+      "wt_position": 146,
+      "pdb_auth_position": 147,
+      "residue": "D"
+    },
+    {
+      "wt_position": 147,
+      "pdb_auth_position": 148,
+      "residue": "N"
+    },
+    {
+      "wt_position": 148,
+      "pdb_auth_position": 149,
+      "residue": "V"
+    },
+    {
+      "wt_position": 149,
+      "pdb_auth_position": 150,
+      "residue": "L"
+    },
+    {
+      "wt_position": 150,
+      "pdb_auth_position": 151,
+      "residue": "V"
+    },
+    {
+      "wt_position": 151,
+      "pdb_auth_position": 152,
+      "residue": "G"
+    },
+    {
+      "wt_position": 152,
+      "pdb_auth_position": 153,
+      "residue": "S"
+    },
+    {
+      "wt_position": 153,
+      "pdb_auth_position": 154,
+      "residue": "F"
+    },
+    {
+      "wt_position": 154,
+      "pdb_auth_position": 155,
+      "residue": "A"
+    },
+    {
+      "wt_position": 155,
+      "pdb_auth_position": 156,
+      "residue": "R"
+    },
+    {
+      "wt_position": 156,
+      "pdb_auth_position": 157,
+      "residue": "T"
+    },
+    {
+      "wt_position": 157,
+      "pdb_auth_position": 158,
+      "residue": "F"
+    },
+    {
+      "wt_position": 158,
+      "pdb_auth_position": 159,
+      "residue": "S"
+    },
+    {
+      "wt_position": 159,
+      "pdb_auth_position": 160,
+      "residue": "L"
+    },
+    {
+      "wt_position": 160,
+      "pdb_auth_position": 161,
+      "residue": "R"
+    },
+    {
+      "wt_position": 161,
+      "pdb_auth_position": 162,
+      "residue": "D"
+    },
+    {
+      "wt_position": 162,
+      "pdb_auth_position": 163,
+      "residue": "G"
+    },
+    {
+      "wt_position": 163,
+      "pdb_auth_position": 164,
+      "residue": "G"
+    },
+    {
+      "wt_position": 164,
+      "pdb_auth_position": 165,
+      "residue": "Y"
+    },
+    {
+      "wt_position": 165,
+      "pdb_auth_position": 166,
+      "residue": "Y"
+    },
+    {
+      "wt_position": 166,
+      "pdb_auth_position": 167,
+      "residue": "S"
+    },
+    {
+      "wt_position": 167,
+      "pdb_auth_position": 168,
+      "residue": "F"
+    },
+    {
+      "wt_position": 168,
+      "pdb_auth_position": 169,
+      "residue": "V"
+    },
+    {
+      "wt_position": 169,
+      "pdb_auth_position": 170,
+      "residue": "V"
+    },
+    {
+      "wt_position": 170,
+      "pdb_auth_position": 171,
+      "residue": "D"
+    },
+    {
+      "wt_position": 171,
+      "pdb_auth_position": 172,
+      "residue": "S"
+    },
+    {
+      "wt_position": 172,
+      "pdb_auth_position": 173,
+      "residue": "H"
+    },
+    {
+      "wt_position": 173,
+      "pdb_auth_position": 174,
+      "residue": "M"
+    },
+    {
+      "wt_position": 174,
+      "pdb_auth_position": 175,
+      "residue": "H"
+    },
+    {
+      "wt_position": 175,
+      "pdb_auth_position": 176,
+      "residue": "F"
+    },
+    {
+      "wt_position": 176,
+      "pdb_auth_position": 177,
+      "residue": "K"
+    },
+    {
+      "wt_position": 177,
+      "pdb_auth_position": 178,
+      "residue": "S"
+    },
+    {
+      "wt_position": 178,
+      "pdb_auth_position": 179,
+      "residue": "A"
+    },
+    {
+      "wt_position": 179,
+      "pdb_auth_position": 180,
+      "residue": "I"
+    },
+    {
+      "wt_position": 180,
+      "pdb_auth_position": 181,
+      "residue": "H"
+    },
+    {
+      "wt_position": 181,
+      "pdb_auth_position": 182,
+      "residue": "P"
+    },
+    {
+      "wt_position": 182,
+      "pdb_auth_position": 183,
+      "residue": "S"
+    },
+    {
+      "wt_position": 183,
+      "pdb_auth_position": 184,
+      "residue": "I"
+    },
+    {
+      "wt_position": 184,
+      "pdb_auth_position": 185,
+      "residue": "L"
+    },
+    {
+      "wt_position": 187,
+      "pdb_auth_position": 188,
+      "residue": "G"
+    },
+    {
+      "wt_position": 188,
+      "pdb_auth_position": 189,
+      "residue": "G"
+    },
+    {
+      "wt_position": 189,
+      "pdb_auth_position": 190,
+      "residue": "P"
+    },
+    {
+      "wt_position": 190,
+      "pdb_auth_position": 191,
+      "residue": "M"
+    },
+    {
+      "wt_position": 191,
+      "pdb_auth_position": 192,
+      "residue": "F"
+    },
+    {
+      "wt_position": 192,
+      "pdb_auth_position": 193,
+      "residue": "A"
+    },
+    {
+      "wt_position": 193,
+      "pdb_auth_position": 194,
+      "residue": "F"
+    },
+    {
+      "wt_position": 194,
+      "pdb_auth_position": 195,
+      "residue": "R"
+    },
+    {
+      "wt_position": 195,
+      "pdb_auth_position": 196,
+      "residue": "R"
+    },
+    {
+      "wt_position": 196,
+      "pdb_auth_position": 197,
+      "residue": "V"
+    },
+    {
+      "wt_position": 197,
+      "pdb_auth_position": 198,
+      "residue": "E"
+    },
+    {
+      "wt_position": 198,
+      "pdb_auth_position": 199,
+      "residue": "E"
+    },
+    {
+      "wt_position": 199,
+      "pdb_auth_position": 200,
+      "residue": "L"
+    },
+    {
+      "wt_position": 200,
+      "pdb_auth_position": 201,
+      "residue": "H"
+    },
+    {
+      "wt_position": 201,
+      "pdb_auth_position": 202,
+      "residue": "S"
+    },
+    {
+      "wt_position": 202,
+      "pdb_auth_position": 203,
+      "residue": "N"
+    },
+    {
+      "wt_position": 203,
+      "pdb_auth_position": 204,
+      "residue": "T"
+    },
+    {
+      "wt_position": 204,
+      "pdb_auth_position": 205,
+      "residue": "E"
+    },
+    {
+      "wt_position": 205,
+      "pdb_auth_position": 206,
+      "residue": "L"
+    },
+    {
+      "wt_position": 206,
+      "pdb_auth_position": 207,
+      "residue": "G"
+    },
+    {
+      "wt_position": 207,
+      "pdb_auth_position": 208,
+      "residue": "I"
+    },
+    {
+      "wt_position": 208,
+      "pdb_auth_position": 209,
+      "residue": "V"
+    },
+    {
+      "wt_position": 209,
+      "pdb_auth_position": 210,
+      "residue": "E"
+    },
+    {
+      "wt_position": 210,
+      "pdb_auth_position": 211,
+      "residue": "Y"
+    },
+    {
+      "wt_position": 211,
+      "pdb_auth_position": 212,
+      "residue": "Q"
+    },
+    {
+      "wt_position": 212,
+      "pdb_auth_position": 213,
+      "residue": "H"
+    },
+    {
+      "wt_position": 213,
+      "pdb_auth_position": 214,
+      "residue": "A"
+    },
+    {
+      "wt_position": 214,
+      "pdb_auth_position": 215,
+      "residue": "F"
+    },
+    {
+      "wt_position": 215,
+      "pdb_auth_position": 216,
+      "residue": "K"
+    },
+    {
+      "wt_position": 216,
+      "pdb_auth_position": 217,
+      "residue": "T"
+    },
+    {
+      "wt_position": 217,
+      "pdb_auth_position": 218,
+      "residue": "P"
+    }
+  ],
+  "rationale": "Fixed experimental backbone compatibility; missing atoms and cyclic chromophore excluded from ProteinMPNN likelihood, not rebuilt as ordinary amino acids",
+  "score_is_not": "A prediction of candidate structure, chromophore maturation, or measured fluorescence"
+}

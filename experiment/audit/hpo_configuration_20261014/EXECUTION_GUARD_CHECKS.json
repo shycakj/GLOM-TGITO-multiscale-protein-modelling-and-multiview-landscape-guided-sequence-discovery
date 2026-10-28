@@ -1,0 +1,8 @@
+{
+  "frozen_final_files_reverified": 10,
+  "context_manifests_reverified": 2700,
+  "old_queue_guard": "passed",
+  "input_hash_mutation_rejected": true,
+  "manifest_path_escape_rejected": true,
+  "status_and_handoff_corrected": true
+}

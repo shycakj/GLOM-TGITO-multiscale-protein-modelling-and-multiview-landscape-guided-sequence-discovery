@@ -1,0 +1,31 @@
+{
+  "repo": "facebook/esm2_t30_150M_UR50D",
+  "revision": "a695f6045e2e32885fa60af20c13cb35398ce30c",
+  "files": [
+    {
+      "file": "config.json",
+      "bytes": 779,
+      "sha256": "e512f68ec444d99477703a9806639ca83da3dbc19f6c5fe428d6e5b7460972dc"
+    },
+    {
+      "file": "model.safetensors",
+      "bytes": 595257706,
+      "sha256": "c3f1da8aea53bddd32c246c86168c23b9fd72341fb9db9a94436f855f5053566"
+    },
+    {
+      "file": "special_tokens_map.json",
+      "bytes": 125,
+      "sha256": "3aedcd4211c0d43aec4e607ff60a63255f3174ead795e997350f09a5f8cd9ee1"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 95,
+      "sha256": "7e9161ecdb548ec45a41cbc6b24aa4476fdd418461f491c4207baa99419a29ad"
+    },
+    {
+      "file": "vocab.txt",
+      "bytes": 93,
+      "sha256": "0b82cc0a7c7cf9e567b1e5892d793285b9fbae822c964ca48696f7db44598e03"
+    }
+  ]
+}

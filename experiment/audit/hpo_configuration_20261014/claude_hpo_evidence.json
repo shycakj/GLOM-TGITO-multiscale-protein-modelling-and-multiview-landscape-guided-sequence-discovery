@@ -1,0 +1,463 @@
+{
+  "source": "C:\\Users\\11947\\.claude\\projects\\D-----GFP\\b5052361-6e68-4309-b583-f06ab1974ee4.jsonl",
+  "records": [
+    {
+      "line": 16305,
+      "role": "assistant",
+      "timestamp": "2026-09-02T08:30:16.568Z",
+      "terms": [
+        "最优参数"
+      ],
+      "excerpts": [
+        "erw/sew/budget) → 选出最佳组合\n第二步: 方法消融 (cos0 vs old_cos) → 确认 cos0 最优\n第三步: 门控方式对比 (fixed vs risk) → risk 动态选源胜\n第四步: 全量探索 (固定最优参数, 只变种子) → 900 山\n```\n\n最终参数：`budget=2, steps=70, restarts=1, terrain_weight=0.03, gate=risk-top5, cos0`"
+      ]
+    },
+    {
+      "line": 16515,
+      "role": "assistant",
+      "timestamp": "2026-09-02T15:22:26.081Z",
+      "terms": [
+        "P4"
+      ],
+      "excerpts": [
+        " | 31480 行 |\n| SaProt H embedding | `LL_GF/cloud_data/pplu_31k_H_embeddings.npy` | 11 GB (31480×221×1280) |\n| Pmutation P4 | `LL_GF/cloud_data/pplu_pmutation_p4.npy` | 107 MB (31480×221×4) |\n| 19 UMAP 图 | `LL_GF/GFP_pplu/results/umap/umap_*.csv` | 19 张 × 31480 行 |\n\n### 🧠 已训练模型参数\n\n| 模型 | 路径 | 大小 | 用途 |\n|------|------|------|------|\n| **GLOM 主模型** | `LL_GF/GFP_pplu/weights/best_model_pplu_31k.pt` | 24 MB | 亮度预测 |\n| **Bridge** | `LL_GF/cloud_data/warm_best_model.pt` | 49 MB | ESM2→SaProt |\n| **Directional Repair** | `LL_GF/cloud_data/v12_9_directional_repair.pt` | 6.1 MB | embedding 修复 |\n| **True-High Gate** | `LL_GF/cloud_data/v12_9_true_high_gate.npz` | 524 KB | 高亮原型门 |\n| **Credible Miner** | `LL_GF/cloud_data/miner_k8.pt` | 64 KB | 挖矿策略 |\n| **Realism Bank** | `LL_GF/cloud_data/realism_bank.npz` | 32 MB | 训练集高亮 bank |\n| **12-Source Terrain** | `LL_GF/cloud_data/terrain_12source.npz` | 196 MB | TG-ITO 地势 |\n| **3-Source Terrain** | `LL_GF/cloud_data/terrain_3"
+      ]
+    },
+    {
+      "line": 17052,
+      "role": "assistant",
+      "timestamp": "2026-09-03T03:02:11.849Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "|\n| ✅ Legacy tuning 数据（400 hidden 隔离） | 完成 |\n| 🔄 **TG-ITO HPO**（36 trials, TPE+successive halving） | **运行中** |\n| ⏳ GLOM warm-start 微调 | 待 HPO |\n| ⏳ 多峰种子计划 → TG-ITO → 基线对比 → hidden400 评分 | 待前序 |\n\n**监控已设**：45 分钟 durable cron + 记忆检查点。GPU 正常运行中（5.4GB/8GB，22%）。\n\n修复的关键坑：TG-ITO 用 `inputs_embeds` 调 ESM 时 `token_dropout=True` 导致 `None==32` 崩溃——已关掉并验证单次运行成功（pred=4.375 新序列）。"
+      ]
+    },
+    {
+      "line": 17084,
+      "role": "assistant",
+      "timestamp": "2026-09-03T10:57:18.359Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS"
+      ],
+      "excerpts": [
+        "成 |\n| 0030 | ✅ 28 runs（stage 推进，多 seed） |\n| 0031 | ✅ |\n| 0032 | 🔄 运行中（GPU 19%） |\n\n马上跑完 36 trials，之后会做 confirmation 和冻结 `FROZEN_TGITO_PARAMS.json`。"
+      ]
+    },
+    {
+      "line": 17101,
+      "role": "assistant",
+      "timestamp": "2026-09-03T11:47:44.600Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS",
+        "topk=6",
+        "最优参数"
+      ],
+      "excerpts": [
+        "seeds）\n\n最优参数趋势：terrain_weight≈0.040，seed_explore≈0.249，lr≈0.044，terrain_topk=6，proposal_every=6。再等 confirmation 跑完就会冻结 `FROZEN_TGITO_PARAMS.json`。",
+        "2146**\n- GPU 86% —— 正在跑 confirmation（top 4 × 24 seeds）\n\n最优参数趋势：terrain_weight≈0.040，seed_explore≈0.249，lr≈0.044，terrain_topk=6，proposal_every=6。再等 confirmation 跑完就会冻结 `FROZEN_TGITO_PARAMS.json`。",
+        "成，大量弱配置被 prune（successive halving 生效）\n- **当前最优：trial 22，value=0.2146**\n- GPU 86% —— 正在跑 confirmation（top 4 × 24 seeds）\n\n最优参数趋势：terrain_weight≈0.040，seed_explore≈0.249，lr≈0.044，terrain_topk=6，proposal_every=6。再等 confirmation 跑完就会冻结 `FROZEN_TGITO_PARAMS.json`。"
+      ]
+    },
+    {
+      "line": 17121,
+      "role": "assistant",
+      "timestamp": "2026-09-03T13:09:13.825Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS",
+        "warm-start",
+        "最优参数"
+      ],
+      "excerpts": [
+        "：每 15 分钟自动巡检。**\n\n当前状态：\n- HPO confirmation 阶段，GPU 24%（短暂空闲，trial 间切换）\n- 已 prune 38 个弱 trial，最优 trial 22（value=0.2146）\n- `FROZEN_TGITO_PARAMS.json` 尚未生成\n\nHPO 一完成，cron 会自动报告最优参数并启动 GLOM warm-start 微调。",
+        " 间切换）\n- 已 prune 38 个弱 trial，最优 trial 22（value=0.2146）\n- `FROZEN_TGITO_PARAMS.json` 尚未生成\n\nHPO 一完成，cron 会自动报告最优参数并启动 GLOM warm-start 微调。",
+        "4%（短暂空闲，trial 间切换）\n- 已 prune 38 个弱 trial，最优 trial 22（value=0.2146）\n- `FROZEN_TGITO_PARAMS.json` 尚未生成\n\nHPO 一完成，cron 会自动报告最优参数并启动 GLOM warm-start 微调。"
+      ]
+    },
+    {
+      "line": 17144,
+      "role": "assistant",
+      "timestamp": "2026-09-03T14:36:12.589Z",
+      "terms": [
+        "warm-start",
+        "最优参数"
+      ],
+      "excerpts": [
+        " 分钟 durable cron 已设（c2dea7fc），每次触发会真正检查 task 输出 + GPU 状态 + FROZEN 文件\n- 记忆检查点已存，会话中断也能恢复\n\n我会持续盯着，HPO 一完成立即报告最优参数并启动 GLOM warm-start 微调。",
+        "ation 阶段\n- 15 分钟 durable cron 已设（c2dea7fc），每次触发会真正检查 task 输出 + GPU 状态 + FROZEN 文件\n- 记忆检查点已存，会话中断也能恢复\n\n我会持续盯着，HPO 一完成立即报告最优参数并启动 GLOM warm-start 微调。"
+      ]
+    },
+    {
+      "line": 17175,
+      "role": "assistant",
+      "timestamp": "2026-09-03T16:29:27.816Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS",
+        "warm-start"
+      ],
+      "excerpts": [
+        "ls 已全部 prune/完成，最优 trial 22（value=0.2146）\n- 现在在跑 top-4 配置 × 24 seeds × 70 steps 的确认轮——这是最慢的阶段\n\ncron 会每 45 分钟自动唤醒我检查，直到 `FROZEN_TGITO_PARAMS.json` 生成，然后自动衔接 GLOM warm-start 微调。",
+        "\n- 现在在跑 top-4 配置 × 24 seeds × 70 steps 的确认轮——这是最慢的阶段\n\ncron 会每 45 分钟自动唤醒我检查，直到 `FROZEN_TGITO_PARAMS.json` 生成，然后自动衔接 GLOM warm-start 微调。"
+      ]
+    },
+    {
+      "line": 17182,
+      "role": "assistant",
+      "timestamp": "2026-09-03T19:49:08.596Z",
+      "terms": [
+        "HPO 完成"
+      ],
+      "excerpts": [
+        "HPO 完成！检查冻结参数："
+      ]
+    },
+    {
+      "line": 17192,
+      "role": "assistant",
+      "timestamp": "2026-09-03T19:49:56.307Z",
+      "terms": [
+        "HPO 完成",
+        "warm-start"
+      ],
+      "excerpts": [
+        "## ✅ HPO 完成 — TG-ITO 参数已冻结\n\n```\nterrain_weight:          0.0464\nseed_explore_weight:     0.2225\nlr:                      0.0389\nterrain_topk:            6\nterrain_gate_temp:       0.2038\nterrain_support_weight:  0.5250\nterrain_risk_weight:     0.7454\nterrain_pred_gap_weight: 0.1654\nterrain_source_quality_power: 0.8665\nproposal_every:          6\nsteps:                   70\nhpo_trial:               12\nconfirmation_mean:       0.2018\n```\n\n现在进入 GLOM 训练。先看 warm-start 脚本：",
+        "         6\nsteps:                   70\nhpo_trial:               12\nconfirmation_mean:       0.2018\n```\n\n现在进入 GLOM 训练。先看 warm-start 脚本："
+      ]
+    },
+    {
+      "line": 17196,
+      "role": "assistant",
+      "timestamp": "2026-09-03T19:50:16.171Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "按用户指令，用 20b warm-start 微调（旧 GLOM 参数在新 split 上微调）："
+      ]
+    },
+    {
+      "line": 17239,
+      "role": "assistant",
+      "timestamp": "2026-09-03T19:52:04.390Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "magic bytes 正确。重跑 GLOM warm-start 训练："
+      ]
+    },
+    {
+      "line": 17310,
+      "role": "assistant",
+      "timestamp": "2026-09-03T20:25:31.264Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "GLOM warm-start 微调运行中（GPU 17%，正在加载 17.8GB 数据 + 构建训练集）。\n\n**当前里程碑：**\n\n| 阶段 | 状态 |\n|------|------|\n| ESM2/HF/env 修复 | ✅ |\n| 数据 split（31434 行） | ✅ |\n| TG-ITO HPO（36 trials） | ✅ 参数已冻结 |\n| **GLOM warm-start 微调** | 🔄 数据加载中 |\n| terrain + 多峰 + 基线 + 评分 | ⏳ |\n\n45 分钟 cron 持续监管，训练完成自动衔接下一步。"
+      ]
+    },
+    {
+      "line": 17334,
+      "role": "user",
+      "timestamp": "2026-09-04T03:16:14.589Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "每 45 分钟监管 GLOM warm-start 微调（task bnohs028o，Windows 任务输出在 C:\\Users\\11947\\AppData\\Local\\Temp\\claude\\D-----GFP\\b5052361-6e68-4309-b583-f06ab1974ee4\\tasks\\bnohs028o.output）。\n\n1. 检查训练进度（真正执行）：\n   - tail 任务输出，看 epoch 行（val_sp/r2 指标）\n   - GPU: wsl -e bash -c \"nvidia-smi --query-gpu=memory.used,utilization.gpu --format=csv,noheader\"\n\n2. 训练完成（checkpoint 保存到 artifacts/glom_current/）后：\n   - 报告 GLOM val 指标\n   - 继续 21_build_current_terrain.sh（后台长任务）\n   - 然后 22_make_multipeak_plan.sh\n   - 然后 23 oracle（独立终端）+ 30 tgito + 31 baselines + 40 评分\n\n3. 报错处理：报告并修复。当前已修复：esm_bridge token_dropout、HF_HOME、TGITO_ENV、PPLU_H_NPY 指向 D:/桌面/GFP/pplu_31k_H_embeddings.npy（17.8GB 完整版，不是 LL_GF 里 11GB 残缺版）、_safe_mmap。\n\n4. 环境：wsl -e bash -c \"cd /mnt/d/桌面/GFP基线/pplu_baseline_repro_2026_09 && source wslenv.sh && conda activate gfp_repro && bash scripts/XX.sh\"\n\n5. GPU 串行规则。"
+      ]
+    },
+    {
+      "line": 17534,
+      "role": "assistant",
+      "timestamp": "2026-09-04T07:28:25.312Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "## ✅ GLOM warm-start 微调完成\n\n| 指标 | 从零训练(历史) | **Warm-start微调** |\n|------|--------------|-------------------|\n| val_spearman | 0.896 | **0.9227** ✅ |\n| val_r2 | — | 0.9565 |\n| val_rmse | — | 0.1076 |\n\n**比从零训练提升 0.027。** 进入下一步：构建 current-split terrain。"
+      ]
+    },
+    {
+      "line": 17545,
+      "role": "assistant",
+      "timestamp": "2026-09-04T07:28:55.970Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "**进度总览：**\n\n| 阶段 | 状态 |\n|------|------|\n| ✅ GLOM warm-start 微调 | val_sp=0.9227 |\n| 🔄 **Terrain 构建** | 运行中 |\n| ⏳ 多峰种子计划 | 待 terrain |\n| ⏳ Oracle + TG-ITO + 基线 + 评分 | 待 plan |\n\n45 分钟 cron 已更新，terrain 完成后自动衔接多峰计划。"
+      ]
+    },
+    {
+      "line": 17591,
+      "role": "user",
+      "timestamp": "2026-09-04T07:31:55.792Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS",
+        "topk=6",
+        "warm-start"
+      ],
+      "excerpts": [
+        "mnt/c/Users/11947/.cache/huggingface`\n   - `src/pplu_repro/esm_patch.py` + `common.py` import\n   - `artifacts/tgito_hpo/FROZEN_TGITO_PARAMS.json`：冻结的 TG-ITO 参数（terrain_weight=0.0464, seed_explore_weight=0.2225, lr=0.0389, terrain_topk=6 等）\n   - `artifacts/glom_current/best_model_pplu_current_split.pt`：warm-start 微调后的 GLOM checkpoint\n   - `artifacts/glom_current/resume_state.pt`：训练续训状态\n   - `artifacts/glom_current/report.json`：val_spearman=0.9227 的训练报告\n\n4. 错误和修复：\n   - **ESM2 mask_token_id AttributeError**（'bool' object has no attribute 'unsqueeze'）：\n     - 最初以为是 mask_token_id=None 的问题\n     - 实际根因：使用 inputs_embeds 调用时 token_dropout=True 且 input_ids=None → `None == 32` 返回 bool scalar\n     - 修复：在 esm_bridge.py 中添加 `self.esm.embeddings.token_dropout = False`\n   - **HF cache 未找到**：WSL cache 为空，Windows cache 完整（568MB）。修复：在 wslenv.sh 中设置 HF_HOME=/mnt/c/Users/11947/.cache/huggingface\n   - **conda run 使用错误环境**：TGITO_ENV 默认为 'tigto'（CPU 环境，无 pandas）。修复：.env.local 中 T",
+        "tgito_hpo/FROZEN_TGITO_PARAMS.json`：冻结的 TG-ITO 参数（terrain_weight=0.0464, seed_explore_weight=0.2225, lr=0.0389, terrain_topk=6 等）\n   - `artifacts/glom_current/best_model_pplu_current_split.pt`：warm-start 微调后的 GLOM checkpoint\n   - `artifacts/glom_current/resume_state.pt`：训练续训状态\n   - `artifacts/glom_current/report.json`：val_spearman=0.9227 的训练报告\n\n4. 错误和修复：\n   - **ESM2 mask_token_id AttributeError**（'bool' object has no attribute 'unsqueeze'）：\n     - 最初以为是 mask_token_id=None 的问题\n     - 实际根因：使用 inputs_embeds 调用时 token_dropout=True 且 input_ids=None → `None == 32` 返回 bool scalar\n     - 修复：在 esm_bridge.py 中添加 `self.esm.embeddings.token_dropout = False`\n   - **HF cache 未找到**：WSL cache 为空，Windows cache 完整（568MB）。修复：在 wslenv.sh 中设置 HF_HOME=/mnt/c/Users/11947/.cache/huggingface\n   - **conda run 使用错误环境**：TGITO_ENV 默认为 'tigto'（CPU 环境，无 pandas）。修复：.env.local 中 TGITO_ENV='gfp_repro'\n   - **CRLF 行结尾**：编辑 .env.local 导致 `\\r': command not found`。修复：`sed -i 's/\\r$//'`\n   - **",
+        "AP 质量、gate MLP 质量、hidden test 找回率）\n   - 运行 **pplu_publication_benchmark_v4** 包：解压，检查代码，进行 TG-ITO 调参（HPO），在新数据划分上微调 GLOM（warm-start 自 best_model_pplu_31k.pt），运行 GLOM-TG-ITO 多峰种子实验，在相同 split 上运行基线实验，并记录结果。用户明确要求每 45 分钟监控一次，并确保任务不被中断。\n   - 用户明确要求 GLOM 训练使用 warm start（\"在那个上面换成包里的实验的数据集来微调训练\"）\n   - 用户要求加入断点续训功能（\"这次加入断点训练\"）\n   - 用户要求 GPU 利用效率优化，但不能让显存溢出（\"能不能并行提高效率，但是别让GPU的内存爆炸\"）\n\n2. 关键技术概念：\n   - TG-ITO：Treasure-Guided Internal Terrain Optimization，12 源动态选 5 的 risk gate\n   - GLOM：基于 ESM2→SaProt→Bridge 的亮度预测模型\n   - HPO：多变量 TPE + 连续减半（successive halving），36 trials，3 阶段（4/8/16 种子，25/45/70 步）\n   - WSL Ubuntu-22.04 + conda gfp_repro 环境（torch 2.5.1+cu121, transformers 4.47.0, optuna 4.9.0）\n   - 数据划分：31434 唯一行（46 个 twin rows 被丢弃），Top1500 分层 → hidden 400 / glom_high 800 / tgito_tune 300\n   - ESM2 mask_token_id 问题：transformers 4.47 使用 inputs_embeds 且 token_dropout=True 时，forward 执行 `(input_ids == self.mask_token_id).unsqueeze`，其中 input_ids=None，导致 'bool' object has no att"
+      ]
+    },
+    {
+      "line": 17741,
+      "role": "assistant",
+      "timestamp": "2026-09-04T07:41:34.283Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "terrain]` 行 |\n\n日志暂时 0 字节是正常的（Python 块缓冲 + 首个 print 在前向循环之后）。\n\n**整体进度回顾**：\n- ✅ HPO 调参（36 trials 完成，best 0.2146）\n- ✅ GLOM warm-start 微调（**val_spearman=0.9227**，从零训练是 0.896，warm start 明显更好）\n- 🔄 **21 terrain 构建中**（当前，预计 30-60 分钟：前向 ~15 分 + 12×UMAP + gate MLP）\n- ⏳ 之后：22 多峰计划 → 23 oracle → 30 TG-ITO 搜索 → 31 基线 → 40 揭封评分\n\n**监控**：已重建 45 分钟定时检查（`faf6463f`，每 :17 触发），terrain 一完成我就自动推进 22→23→30→31→40 全流程，有失败立即修复。"
+      ]
+    },
+    {
+      "line": 18374,
+      "role": "assistant",
+      "timestamp": "2026-09-04T13:37:10.590Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS",
+        "topk=6",
+        "warm-start"
+      ],
+      "excerpts": [
+        "格 GLOM（含 y_mean/y_std） | `artifacts/glom_current/` |\n| `resume_state.pt` | GLOM 训练断点状态 | `artifacts/glom_current/` |\n| `FROZEN_TGITO_PARAMS.json` | **冻结 TG-ITO 参数**（terrain_weight=0.0464, seed_explore_weight=0.2225, lr=0.0389, terrain_topk=6, steps=70 等） | `artifacts/tgito_hpo/` |\n| `blind_observed_12source_terrain.npz` | 12 源地形（827MB） | `artifacts/tgito_blind/` |\n| `gate_models/gate_*.joblib` | 12 个 gate MLP 模型 | `artifacts/tgito_blind/gate_models/` |\n| `multipeak_seed_plan.csv` | 2700 起点（方法共用公平起点） | `artifacts/multipeak/` |\n| `best_model_pplu_31k.pt` | 原 31K GLOM（warm-start 源） | `D:\\桌面\\GFP\\LL_GF\\GFP_pplu\\weights\\` |\n| `warm_best_model.pt` | Bridge 权重 | `D:\\桌面\\GFP\\LL_GF\\cloud_data\\` |\n| `pplu_31k_H_embeddings.npy` | 31K×221×1280 嵌入（17.8GB） | `D:\\桌面\\GFP\\` |\n\n全部路径基准目录：`D:\\桌面\\GFP基线\\pplu_baseline_repro_2026_09\\`。需要恢复时说\"继续\"即可。",
+        "|\n| `FROZEN_TGITO_PARAMS.json` | **冻结 TG-ITO 参数**（terrain_weight=0.0464, seed_explore_weight=0.2225, lr=0.0389, terrain_topk=6, steps=70 等） | `artifacts/tgito_hpo/` |\n| `blind_observed_12source_terrain.npz` | 12 源地形（827MB） | `artifacts/tgito_blind/` |\n| `gate_models/gate_*.joblib` | 12 个 gate MLP 模型 | `artifacts/tgito_blind/gate_models/` |\n| `multipeak_seed_plan.csv` | 2700 起点（方法共用公平起点） | `artifacts/multipeak/` |\n| `best_model_pplu_31k.pt` | 原 31K GLOM（warm-start 源） | `D:\\桌面\\GFP\\LL_GF\\GFP_pplu\\weights\\` |\n| `warm_best_model.pt` | Bridge 权重 | `D:\\桌面\\GFP\\LL_GF\\cloud_data\\` |\n| `pplu_31k_H_embeddings.npy` | 31K×221×1280 嵌入（17.8GB） | `D:\\桌面\\GFP\\` |\n\n全部路径基准目录：`D:\\桌面\\GFP基线\\pplu_baseline_repro_2026_09\\`。需要恢复时说\"继续\"即可。",
+        "ITO HPO 调参 | 36 trials 完成，best 0.2146，确认 0.2018 | `artifacts/tgito_hpo/` |\n| GLOM 训练 | **val_spearman=0.9227**，R²=0.957，warm-start 自 31K 模型 | `artifacts/glom_current/` |\n| Terrain 地形 | 12 源盲测地形 + gate 模型 | `artifacts/tgito_blind/` |\n| 多峰计划 | 900 峰 × 3 角色 = 2700 起点 | `artifacts/multipeak/` |\n| TG-ITO 搜索 | **215/2700 starts**（seed 1，暂停中） | `results/search/multipeak/tgito/rep_20260902/` |\n\n### 二、待运行的实验（⏳）\n\n1. **TG-ITO 剩余搜索**：2485 starts（seed 1）+ 5400（seeds 2、3）≈ 5.5 天\n2. **31 基线对比**：μSearch / AdaLead / Evo-BO / Pure Random，同 2700 起点 × 3 seeds（脚本 `scripts/31_run_headline_baselines_multipeak.sh`）\n3. **40 揭封评分**：全部方法完成后才允许读 hidden400 标签（`scripts/40_unseal_and_score_hidden400.sh`）\n\n### 三、环境配置\n\n| 项 | 配置 |\n|---|---|\n| 运行平台 | WSL Ubuntu-22.04（3.8GB RAM）+ Windows 11 |\n| GPU | RTX 4060 8GB（WSL 串行规则） |\n| Python 环境 | conda `gfp_repro`（torch 2.5.1+cu121, transformers 4.47.0, optuna 4.9.0）；基线用 `pplu_baseline_core` |\n| 环境文件 | `.env.local`（TGITO_ENV=gfp_repro、数据路径）；`wslenv."
+      ]
+    },
+    {
+      "line": 18476,
+      "role": "assistant",
+      "timestamp": "2026-09-04T14:37:15.206Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS",
+        "P4"
+      ],
+      "excerpts": [
+        "（TG-ITO 每步用） |\n| `artifacts/glom_current/` | 96MB | GLOM 模型（oracle + worker 用） |\n| `artifacts/tgito_hpo/` | 47MB | 冻结参数 FROZEN_TGITO_PARAMS.json |\n| `artifacts/multipeak/` | 884K | 900 峰 × 3 角色起点计划 |\n| `results/` | 15MB | **215 个已完成 start（断点续跑关键）** |\n| `warm_best_model.pt`（LL_GF/cloud_data/） | 48MB | Bridge 权重 |\n| ESM2 缓存 | ~570MB | 或云端重新下载（hf-mirror，更快） |\n\n### 二、不必上传\n\n| 内容 | 大小 | 原因 |\n|---|---|---|\n| `pplu_31k_H_embeddings.npy` | **17.8GB** | 仅 GLOM 训练/terrain 构建用——已完成，搜索阶段不需要 |\n| `artifacts/glom_blind/` | 17GB | 本地遗留的无用 H 缓存 |\n| `pplu_pmutation_p4.npy` | 107MB | 同上，可选 |\n| `best_model_pplu_31k.pt` | 24MB | 仅重训 GLOM 才需要，可选 |\n\n### 三、打包命令（模拟，在 WSL 执行）\n\n```bash\ncd /mnt/d/桌面/GFP基线\ntar czf benchmark_cloud.tar.gz \\\n  --exclude='pplu_baseline_repro_2026_09/artifacts/glom_blind' \\\n  --exclude='pplu_baseline_repro_2026_09/artifacts/downloads' \\\n  --exclude='pplu_baseline_repro_2026_09/logs' \\\n  --exclude='__pycache__' \\\n  pplu_baseline_repro_2026_09\n# 预计 ~1.05GB；wa",
+        "| **17.8GB** | 仅 GLOM 训练/terrain 构建用——已完成，搜索阶段不需要 |\n| `artifacts/glom_blind/` | 17GB | 本地遗留的无用 H 缓存 |\n| `pplu_pmutation_p4.npy` | 107MB | 同上，可选 |\n| `best_model_pplu_31k.pt` | 24MB | 仅重训 GLOM 才需要，可选 |\n\n### 三、打包命令（模拟，在 WSL 执行）\n\n```bash\ncd /mnt/d/桌面/GFP基线\ntar czf benchmark_cloud.tar.gz \\\n  --exclude='pplu_baseline_repro_2026_09/artifacts/glom_blind' \\\n  --exclude='pplu_baseline_repro_2026_09/artifacts/downloads' \\\n  --exclude='pplu_baseline_repro_2026_09/logs' \\\n  --exclude='__pycache__' \\\n  pplu_baseline_repro_2026_09\n# 预计 ~1.05GB；warm_best_model.pt 已在包里（LL_GF 不在内，需单独传）\nscp benchmark_cloud.tar.gz warm_best_model.pt user@cloud:/data/\n```\n\n### 四、云端落地必改路径清单\n\n| 文件 | 要改的路径 |\n|---|---|\n| `configs/publication_experiment.json` | `/mnt/d/桌面/...` → `/data/...`（bridge_ckpt 等） |\n| `.env.local` | `PPLU_H_NPY`（可选留空）、`TGITO_ENV`、`PPLU_BRIDGE_CKPT` |\n| `wslenv.sh` | conda 路径 `/home/nmkzn/` → 云端用户名 |\n| `run_30_parallel.sh` / `launch_step.sh` | 同上 + BRIDGE_CKPT 路径 |\n| 环境 | 需装"
+      ]
+    },
+    {
+      "line": 18633,
+      "role": "assistant",
+      "timestamp": "2026-09-04T15:15:35.823Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "| `env_snapshots/` | gfp_repro + pplu_baseline_core 的 conda/pip 快照 | ✓ |\n| `CLOUD_MIGRATION_PROGRESS.txt` | 进度 + 科学审计提醒（warm-start 泄漏说明已写入） | ✓ |\n| `CLOUD_PATHS_TO_EDIT.txt` | 云端必改路径清单（.env.local / wslenv.sh / configs / run_30_parallel.sh） | ✓ |\n| `SHA256SUMS.txt` | 6 个关键文件哈希 | ✓ |\n\n### 云端落地要点（已写入包内清单）\n\n1. 改路径（`CLOUD_PATHS_TO_EDIT.txt` 有逐条说明）→ 跑 preflight（进度文件里有完整清单）\n2. 建 3 个环境：`gfp_repro`、`pplu_baseline_core`、`pplu_musearch`（python 3.8 + torch 1.11，flexs 装自包内 Mu-Protein）\n3. 起 oracle → 起 `run_30_parallel.sh`（自动从 215/2700 断点续跑）\n4. baseline 的 resume 补丁已加好，但 **kill/restart smoke test（12 starts）必须在云端先做**（本地没有 flexs 环境，已在进度文件注明）\n5. baseline 跑时设 `CUDA_VISIBLE_DEVICES=\"\"`（清单第 10 节要求）\n\n直接上传 `benchmark_cloud.tar.gz` 到 AutoDL 即可。"
+      ]
+    },
+    {
+      "line": 18707,
+      "role": "assistant",
+      "timestamp": "2026-09-04T15:34:24.979Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS"
+      ],
+      "excerpts": [
+        "ty.csv / report.json\n      │  │  └─ gate_models/             ← 12 个 gate_*.joblib\n      │  └─ tgito_hpo/\n      │     ├─ FROZEN_TGITO_PARAMS.json\n      │     ├─ trials.csv / confirmation.json / study.sqlite3\n      │     ├─ confirmation/            ← rank_0~3 × trial × 3 rep × 24 seed\n      │     └─ trials/                  ← 36 个 trial_XXXX (stage_0/1/2)\n      ├─ configs/                       ← publication_experiment.json 等\n      ├─ data/\n      │  ├─ audit/\n      │  ├─ processed/\n      │  │  ├─ prediction/ prediction_adapters/\n      │  │  ├─ search/                  ← glom_train/val、tgito_tune_300、observed_all\n      │  │  └─ tuning_legacy_embargoed/\n      │  └─ sealed/\n      │     ├─ prediction/\n      │     └─ search/                  ← hidden_top1500_400_with_labels.csv (密封)\n      ├─ glom/                          ← GLOM 训练+terrain 脚本\n      ├─ legacy_v2/{scripts,search}/\n      ├─ multipeak/                     ← 多峰计划脚本\n      ├─ pipeline/\n      │  ├─ glom_"
+      ]
+    },
+    {
+      "line": 18943,
+      "role": "user",
+      "timestamp": "2026-09-06T12:03:32.964Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS"
+      ],
+      "excerpts": [
+        "──────────────────────────────────┤\n  │ artifacts/tgito_hpo/                                            │ 47MB   │ 冻结参数 FROZEN_TGITO_PARAMS.json     │\n  ├─────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────┤\n  │ artifacts/multipeak/                                            │ 884K   │ 900 峰 × 3 角色起点计划               │\n  ├─────────────────────────────────────────────────────────────────┼────────┼───────────────────────────────────────┤\n  │ results/                                                        │ 15MB   │ 215 个已完成 start（断点续跑关键）    │\n  ├─────────────────────────────────────────────────────，之前上传的模型，我们的数据集划分和超参数参数文件以及相关调参算法有吗"
+      ]
+    },
+    {
+      "line": 18973,
+      "role": "assistant",
+      "timestamp": "2026-09-06T12:09:00.866Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS",
+        "topk=6",
+        "P4"
+      ],
+      "excerpts": [
+        "ch/hidden_top1500_400_with_labels.csv` + `hidden_sequence_hashes.txt` |\n\n### 3. 超参数文件 ✓\n\n- `project/artifacts/tgito_hpo/FROZEN_TGITO_PARAMS.json` — **冻结的 TG-ITO 参数**（terrain_weight=0.0464、seed_explore_weight=0.2225、lr=0.0389、topk=6 等全部 30 个参数）\n- `project/configs/publication_experiment.json` — 协议级配置：数据划分规则（Top1500 分层 400/800/300）、HPO 搜索空间（10 个参数的 low/high/choices）、GLOM 超参（epochs=120、lr=3e-5、patience=18）、多峰配置、对比方法清单\n\n### 4. 调参算法代码 ✓\n\n- `project/tuning/run_tgito_hpo.py` — **HPO 实现本体**（多变量 TPE + successive halving 三阶段 4/8/16 种子、confirmation 24 种子）\n- `project/tuning/prepare_legacy_tuning.py` — 调参用 legacy 数据集准备（embargo 处理）\n- `project/tuning/score_tuning_candidates.py` — 候选评分\n- **调参过程完整记录**：`project/artifacts/tgito_hpo/` 含 `trials.csv`（36 个 trial）、`study.sqlite3`（optuna 数据库）、`confirmation/`（4 个最佳配置 × 3 rep × 24 seed 的完整运行日志+指标）\n\n也就是说：**除了 17.8GB H embeddings 和 107MB P4（重训 GLOM/重建 terrain 才需要），论文复现所需的模型、划分、参数、调参算法及过程证据全部在包里**。",
+        "acts/tgito_hpo/FROZEN_TGITO_PARAMS.json` — **冻结的 TG-ITO 参数**（terrain_weight=0.0464、seed_explore_weight=0.2225、lr=0.0389、topk=6 等全部 30 个参数）\n- `project/configs/publication_experiment.json` — 协议级配置：数据划分规则（Top1500 分层 400/800/300）、HPO 搜索空间（10 个参数的 low/high/choices）、GLOM 超参（epochs=120、lr=3e-5、patience=18）、多峰配置、对比方法清单\n\n### 4. 调参算法代码 ✓\n\n- `project/tuning/run_tgito_hpo.py` — **HPO 实现本体**（多变量 TPE + successive halving 三阶段 4/8/16 种子、confirmation 24 种子）\n- `project/tuning/prepare_legacy_tuning.py` — 调参用 legacy 数据集准备（embargo 处理）\n- `project/tuning/score_tuning_candidates.py` — 候选评分\n- **调参过程完整记录**：`project/artifacts/tgito_hpo/` 含 `trials.csv`（36 个 trial）、`study.sqlite3`（optuna 数据库）、`confirmation/`（4 个最佳配置 × 3 rep × 24 seed 的完整运行日志+指标）\n\n也就是说：**除了 17.8GB H embeddings 和 107MB P4（重训 GLOM/重建 terrain 才需要），论文复现所需的模型、划分、参数、调参算法及过程证据全部在包里**。",
+        "study.sqlite3`（optuna 数据库）、`confirmation/`（4 个最佳配置 × 3 rep × 24 seed 的完整运行日志+指标）\n\n也就是说：**除了 17.8GB H embeddings 和 107MB P4（重训 GLOM/重建 terrain 才需要），论文复现所需的模型、划分、参数、调参算法及过程证据全部在包里**。"
+      ]
+    },
+    {
+      "line": 18991,
+      "role": "assistant",
+      "timestamp": "2026-09-06T12:10:04.169Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS",
+        "trial=12",
+        "topk=6"
+      ],
+      "excerpts": [
+        "n 4 个最优配置 × 24 种子\n- **最终选中 hpo_trial=12**：study 值 0.2078，确认均值 **0.2018 ± 0.0127**（24 种子）\n\n**冻结文件** `artifacts/tgito_hpo/FROZEN_TGITO_PARAMS.json`（协议 `pplu-publication-v4-2026-09-02`）：\n```\nterrain_weight=0.04643, seed_explore_weight=0.22247, lr=0.03888\nterrain_topk=6, terrain_gate_temp=0.20380\nterrain_support_weight=0.52498, terrain_risk_weight=0.74545\nterrain_pred_gap_weight=0.16545, terrain_source_quality_power=0.86653\nproposal_every=6, steps=70\n+ 固定项：mutation_budget=2, num_restarts=1, risk gate, proposal_order=2,\n  proposal_candidates=64, amp=bf16, accept/select_by_objective, reject_known_output...\n```\n\n### 二、种子方案（已定，搜索尚未跑完）\n\n| 层级 | 种子 |\n|---|---|\n| replicate seeds（3 个独立重复） | **20260902 / 20260903 / 20260904** |\n| 每个 start 的 local seed | `replicate_seed + start_index × 1009`（2700 起点全部独立） |\n| HPO study seed | 20260902；confirmation 24 种子 |\n| GLOM 训练 seed | 20260902 |\n| 基线（31 四方法） | 同样 3 个 replicate seeds × 同样 local seed 规则 |\n\n**当前状态**：TG-ITO 搜索只完成了 seed 20",
+        "A 式三阶段）\n- 36 trials：stage0 4 种子×25 步 → stage1 8 种子×45 步 → stage2 16 种子×70 步 → confirmation 4 个最优配置 × 24 种子\n- **最终选中 hpo_trial=12**：study 值 0.2078，确认均值 **0.2018 ± 0.0127**（24 种子）\n\n**冻结文件** `artifacts/tgito_hpo/FROZEN_TGITO_PARAMS.json`（协议 `pplu-publication-v4-2026-09-02`）：\n```\nterrain_weight=0.04643, seed_explore_weight=0.22247, lr=0.03888\nterrain_topk=6, terrain_gate_temp=0.20380\nterrain_support_weight=0.52498, terrain_risk_weight=0.74545\nterrain_pred_gap_weight=0.16545, terrain_source_quality_power=0.86653\nproposal_every=6, steps=70\n+ 固定项：mutation_budget=2, num_restarts=1, risk gate, proposal_order=2,\n  proposal_candidates=64, amp=bf16, accept/select_by_objective, reject_known_output...\n```\n\n### 二、种子方案（已定，搜索尚未跑完）\n\n| 层级 | 种子 |\n|---|---|\n| replicate seeds（3 个独立重复） | **20260902 / 20260903 / 20260904** |\n| 每个 start 的 local seed | `replicate_seed + start_index × 1009`（2700 起点全部独立） |\n| HPO study seed | 20260902；confirmation 24 种子 |\n| GLOM 训练 seed | 20260902 |\n|",
+        "json`（协议 `pplu-publication-v4-2026-09-02`）：\n```\nterrain_weight=0.04643, seed_explore_weight=0.22247, lr=0.03888\nterrain_topk=6, terrain_gate_temp=0.20380\nterrain_support_weight=0.52498, terrain_risk_weight=0.74545\nterrain_pred_gap_weight=0.16545, terrain_source_quality_power=0.86653\nproposal_every=6, steps=70\n+ 固定项：mutation_budget=2, num_restarts=1, risk gate, proposal_order=2,\n  proposal_candidates=64, amp=bf16, accept/select_by_objective, reject_known_output...\n```\n\n### 二、种子方案（已定，搜索尚未跑完）\n\n| 层级 | 种子 |\n|---|---|\n| replicate seeds（3 个独立重复） | **20260902 / 20260903 / 20260904** |\n| 每个 start 的 local seed | `replicate_seed + start_index × 1009`（2700 起点全部独立） |\n| HPO study seed | 20260902；confirmation 24 种子 |\n| GLOM 训练 seed | 20260902 |\n| 基线（31 四方法） | 同样 3 个 replicate seeds × 同样 local seed 规则 |\n\n**当前状态**：TG-ITO 搜索只完成了 seed 20260902 的 215/2700 starts（暂停中），seed 03/04 和全部基线未跑——云端续跑时种子规则在代码里是自动的（`run_tgito_multipeak_frozen.py` 和 `run_flexs_multipeak.py` 的 local seed "
+      ]
+    },
+    {
+      "line": 19005,
+      "role": "assistant",
+      "timestamp": "2026-09-06T12:13:07.155Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        " 32。要么论文写 64（实际值），要么改 config 保持一致（不影响已产出结果，训练已冻结）。\n\n2. **init_mode 与 config 的 note 冲突**——config 明确写着\"strict headline 禁止 warm-start 自 full31K checkpoint（hidden400 泄漏风险）\"，但你当时要求用 `best_model_pplu_31k.pt` warm-start 微调，实际就是这么跑的。checkpoint 元数据里 `init_mode='safe_checkpoint'`、`strict_headline_valid=True` 记录的是\"hidden400 未被本次训练直接读取\"，但旧 checkpoint 的监督信息不会因微调消失——这个泄漏风险已经写进云包的 `CLOUD_MIGRATION_PROGRESS.txt` 和第 21 节科学审计说明里，审稿时如果被质疑 strictness，需要按\"从零训练\"补一版或明确声明为 non-blind 补充实验。"
+      ]
+    },
+    {
+      "line": 19019,
+      "role": "assistant",
+      "timestamp": "2026-09-06T12:15:12.347Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "数字全部联动一致 ✓。但发现一个疑点：checkpoint 元数据写 `init_mode: scratch`，与实际 warm-start 训练矛盾。查训练历史验证："
+      ]
+    },
+    {
+      "line": 19027,
+      "role": "assistant",
+      "timestamp": "2026-09-06T12:15:48.911Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "'scratch'` 与事实不符**。铁证：training_history.csv 的 **epoch 1 val_spearman=0.9182**——从零训练不可能起点这么高（scratch 训练全程最高才 0.896），证明实际是 warm-start 自 `best_model_pplu_31k.pt`。\n\n原因：warm-start 训练中途断电，用 `--resume` 恢复的进程没有 `--init-checkpoint` 参数，保存 best 时字段回落到默认标签 `'scratch'`。\n\n已修正：在 `report.json` 中补充 `init_mode_actual = \"warmstart_from_best_model_pplu_31k_then_resume\"` + 完整说明（模型权重未动，只改记录）。论文中应以这个修正后的 provenance 为准，并保留 hidden400 泄漏警示（清单第 21 节）。"
+      ]
+    },
+    {
+      "line": 19037,
+      "role": "assistant",
+      "timestamp": "2026-09-06T12:17:43.990Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS"
+      ],
+      "excerpts": [
+        "（1.4GB，云端迁移主包）— **v4 实验的全部关键配置**\n\n| 你要的东西 | 包内路径 |\n|---|---|\n| **超参数文件**（v4 TG-ITO 冻结参数） | `project/artifacts/tgito_hpo/FROZEN_TGITO_PARAMS.json` |\n| **GLOM 参数**（超参+训练记录） | `project/configs/publication_experiment.json`（glom 段）+ `project/artifacts/glom_current/`（模型、report.json、training_history.csv） |\n| **调优方法代码**（TPE+successive halving） | `project/tuning/run_tgito_hpo.py` + `prepare_legacy_tuning.py` + `score_tuning_candidates.py` |\n| **调优过程记录**（36 trials 证据） | `project/artifacts/tgito_hpo/`（trials.csv、study.sqlite3、confirmation/ 全日志） |\n| **实验方法/协议** | `project/configs/publication_experiment.json` + `project/scripts/`（23/30/31/40 全套流程）+ `CLOUD_MIGRATION_PROGRESS.txt` |\n| 数据划分（train/val/密封 hidden400） | `project/data/` |\n\n### ② `pplu_v4_code_only.tar.gz`（156KB，纯代码审阅包）\n\n- 只有代码：`tuning/`（HPO 实现）、`scripts/`、`pipeline/`、`search/` 等\n- **不含**任何参数值文件、数据、模型（这是它的定位：纯代码审阅）\n\n### ③ `v13_5_publication_provenance.tar.gz`（314MB，历史论文复现包）\n\n| 你要的东西 | 包内路径 |\n|---|---|\n| **超参数**"
+      ]
+    },
+    {
+      "line": 19061,
+      "role": "assistant",
+      "timestamp": "2026-09-06T12:20:03.422Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS",
+        "trial 12",
+        "topk=6",
+        "warm-start"
+      ],
+      "excerpts": [
+        "* | **最新 HPO 调出来的**（terrain_weight=0.0464、lr=0.0389、topk=6，trial 12，confirmation 0.2018） | `project/artifacts/tgito_hpo/FROZEN_TGITO_PARAMS.json` |\n| **GLOM 模型+参数** | **最新重新训练的**（warm-start 31K 后微调，val_spearman=0.9227，R²=0.957） | `project/artifacts/glom_current/best_model_pplu_current_split.pt` + `report.json` + `training_history.csv` |\n| **GLOM 超参** | epochs=120、lr=3e-5、batch 实际 64、patience 18、cosine、Huber δ=1.0 | `project/configs/publication_experiment.json`（glom 段） |\n| **超参数调优方法** | 多变量 TPE + successive halving（36 trials 三阶段） | `project/tuning/run_tgito_hpo.py` + 过程记录 `project/artifacts/tgito_hpo/trials.csv`、`study.sqlite3`、`confirmation/` |\n| **实验方法/协议** | v4 协议（hidden400 密封、900 山×3 角色、5 方法公平对比） | `project/configs/publication_experiment.json` + `project/scripts/` + `CLOUD_MIGRATION_PROGRESS.txt` |\n| **数据划分** | 最新 31434 划分（train 27656/val 3078/密封 400） | `project/data/processed/search/` + `project/data/sealed/` |\n\n（这些都已逐项验证在包内 ✓）\n\n`v13_5_publication_prov",
+        ".tar.gz 内）\n\n| 你要的 | 版本 | 包内路径 |\n|---|---|---|\n| **TG-ITO 超参数** | **最新 HPO 调出来的**（terrain_weight=0.0464、lr=0.0389、topk=6，trial 12，confirmation 0.2018） | `project/artifacts/tgito_hpo/FROZEN_TGITO_PARAMS.json` |\n| **GLOM 模型+参数** | **最新重新训练的**（warm-start 31K 后微调，val_spearman=0.9227，R²=0.957） | `project/artifacts/glom_current/best_model_pplu_current_split.pt` + `report.json` + `training_history.csv` |\n| **GLOM 超参** | epochs=120、lr=3e-5、batch 实际 64、patience 18、cosine、Huber δ=1.0 | `project/configs/publication_experiment.json`（glom 段） |\n| **超参数调优方法** | 多变量 TPE + successive halving（36 trials 三阶段） | `project/tuning/run_tgito_hpo.py` + 过程记录 `project/artifacts/tgito_hpo/trials.csv`、`study.sqlite3`、`confirmation/` |\n| **实验方法/协议** | v4 协议（hidden400 密封、900 山×3 角色、5 方法公平对比） | `project/configs/publication_experiment.json` + `project/scripts/` + `CLOUD_MIGRATION_PROGRESS.txt` |\n| **数据划分** | 最新 31434 划分（train 27656/val 3078/密封 400） | `project/data/processed/search/` + `proj",
+        "k_cloud.tar.gz 内）\n\n| 你要的 | 版本 | 包内路径 |\n|---|---|---|\n| **TG-ITO 超参数** | **最新 HPO 调出来的**（terrain_weight=0.0464、lr=0.0389、topk=6，trial 12，confirmation 0.2018） | `project/artifacts/tgito_hpo/FROZEN_TGITO_PARAMS.json` |\n| **GLOM 模型+参数** | **最新重新训练的**（warm-start 31K 后微调，val_spearman=0.9227，R²=0.957） | `project/artifacts/glom_current/best_model_pplu_current_split.pt` + `report.json` + `training_history.csv` |\n| **GLOM 超参** | epochs=120、lr=3e-5、batch 实际 64、patience 18、cosine、Huber δ=1.0 | `project/configs/publication_experiment.json`（glom 段） |\n| **超参数调优方法** | 多变量 TPE + successive halving（36 trials 三阶段） | `project/tuning/run_tgito_hpo.py` + 过程记录 `project/artifacts/tgito_hpo/trials.csv`、`study.sqlite3`、`confirmation/` |\n| **实验方法/协议** | v4 协议（hidden400 密封、900 山×3 角色、5 方法公平对比） | `project/configs/publication_experiment.json` + `project/scripts/` + `CLOUD_MIGRATION_PROGRESS.txt` |\n| **数据划分** | 最新 31434 划分（train 27656/val 3078/密封 400） | `project/data/processed/search/` ",
+        "trial 12，confirmation 0.2018） | `project/artifacts/tgito_hpo/FROZEN_TGITO_PARAMS.json` |\n| **GLOM 模型+参数** | **最新重新训练的**（warm-start 31K 后微调，val_spearman=0.9227，R²=0.957） | `project/artifacts/glom_current/best_model_pplu_current_split.pt` + `report.json` + `training_history.csv` |\n| **GLOM 超参** | epochs=120、lr=3e-5、batch 实际 64、patience 18、cosine、Huber δ=1.0 | `project/configs/publication_experiment.json`（glom 段） |\n| **超参数调优方法** | 多变量 TPE + successive halving（36 trials 三阶段） | `project/tuning/run_tgito_hpo.py` + 过程记录 `project/artifacts/tgito_hpo/trials.csv`、`study.sqlite3`、`confirmation/` |\n| **实验方法/协议** | v4 协议（hidden400 密封、900 山×3 角色、5 方法公平对比） | `project/configs/publication_experiment.json` + `project/scripts/` + `CLOUD_MIGRATION_PROGRESS.txt` |\n| **数据划分** | 最新 31434 划分（train 27656/val 3078/密封 400） | `project/data/processed/search/` + `project/data/sealed/` |\n\n（这些都已逐项验证在包内 ✓）\n\n`v13_5_publication_provenance.tar.gz` 里是**半年前**的六蛋白探索实验（seed=0、terrain_weight=0.03"
+      ]
+    },
+    {
+      "line": 19137,
+      "role": "assistant",
+      "timestamp": "2026-09-06T13:57:12.360Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS",
+        "trial 12"
+      ],
+      "excerpts": [
+        "拟合嫌疑，方差也最大）；**trial 12 确认后最稳（0.2018±0.0127），因此被选中冻结**——这正是\"confirmation 定胜负、避免只信 study 值\"的 protocol 设计初衷。\n\n### 三、最终冻结参数（FROZEN_TGITO_PARAMS.json）\n\n```\nterrain_weight = 0.04643          terrain_gate_temp = 0.20380\nseed_explore_weight = 0.22247     terrain_support_weight = 0.52498\nlr = 0.03888                      terrain_risk_weight = 0.74545\nterrain_topk = 6                  terrain_pred_gap_weight = 0.16545\nproposal_every = 6                terrain_source_quality_power = 0.86653\nsteps = 70, mutation_budget = 2, num_restarts = 1, amp = bf16\n+ 固定项：risk gate / proposal_order=2 / candidates=64 / reject_known_output 等\n协议：pplu-publication-v4-2026-09-02\n```\n\n这些结果记录在 `TGITO_RESULTS_COMPLETE_20260906.tar.gz` 内 `pplu_cloud_runtime/project/artifacts/tgito_hpo/`（confirmation.json、trials.csv、study.sqlite3、confirmation/ 全日志）。",
+        "*0.2146**（调参最高） | 0.1816 | ±0.0188 |\n\n**关键发现（论文可写）**：trial 22 在调参阶段值最高（0.2146），但 confirmation 里掉到 0.1816（过拟合嫌疑，方差也最大）；**trial 12 确认后最稳（0.2018±0.0127），因此被选中冻结**——这正是\"confirmation 定胜负、避免只信 study 值\"的 protocol 设计初衷。\n\n### 三、最终冻结参数（FROZEN_TGITO_PARAMS.json）\n\n```\nterrain_weight = 0.04643          terrain_gate_temp = 0.20380\nseed_explore_weight = 0.22247     terrain_support_weight = 0.52498\nlr = 0.03888                      terrain_risk_weight = 0.74545\nterrain_topk = 6                  terrain_pred_gap_weight = 0.16545\nproposal_every = 6                terrain_source_quality_power = 0.86653\nsteps = 70, mutation_budget = 2, num_restarts = 1, amp = bf16\n+ 固定项：risk gate / proposal_order=2 / candidates=64 / reject_known_output 等\n协议：pplu-publication-v4-2026-09-02\n```\n\n这些结果记录在 `TGITO_RESULTS_COMPLETE_20260906.tar.gz` 内 `pplu_cloud_runtime/project/artifacts/tgito_hpo/`（confirmation.json、trials.csv、study.sqlite3、confirmation/ 全日志）。"
+      ]
+    },
+    {
+      "line": 19150,
+      "role": "assistant",
+      "timestamp": "2026-09-06T14:00:33.440Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "## 当时的 GLOM 训练结果（v4 最新版，warm-start 微调）\n\n### 一、最终验证集指标（report.json 记录）\n\n| 指标 | 值 |\n|---|---|\n| **val Spearman** | **0.9227** |\n| val Pearson | 0.9789 |\n| val R² | 0.9565 |\n| val RMSE | 0.1076 |\n| val MAE | 0.0541 |\n| 训练/验证规模 | 27,656 / 3,078（无重叠，val 占 10%） |\n| 数据合规 | hidden400 未加载 ✓、tgito_tune300 未加载 ✓、strict_headline_valid=true |\n\n### 二、训练过程（training_history.csv，40 epochs）\n\n| 阶段 | val_spearman | 说明 |\n|---|---|---|\n| epoch 1 | **0.9182** | 起点即 0.918——warm-start 自 `best_model_pplu_31k.pt` 的铁证（从零训练全程最高才 0.896） |\n| epoch 2 | 0.9198 | |\n| 中段 | 0.916-0.922 | 波动收敛 |\n| 末段 (38-40) | 0.9196→0.9208 | 仍有缓慢上升 |\n| **best（存档点）** | **0.9227** | 保存在 best_model_pplu_current_split.pt |\n\n配置：AdamW lr=3e-5（cosine 衰减至 5%）、weight_decay=1e-4、Huber δ=1.0、梯度裁剪 1.0、patience=18、实际 batch=64。\n\n### 三、关键对比（论文可写）\n\n| 版本 | val_spearman | 说明 |\n|---|---|---|\n| 从零训练（scratch） | 0.896 | 早先试验的基线 |\n| **w"
+      ]
+    },
+    {
+      "line": 19326,
+      "role": "assistant",
+      "timestamp": "2026-09-06T14:33:15.752Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "旧全管线） vs revised_slim（GLOM 精简版）\n划分：train 15940 / val 1992 / test 1993\n```\n\n### 与现在的 v4 对比\n\n| | 历史（routeB seed0） | 现在（v4 warm-start） |\n|---|---|---|\n| 结构 | revised_slim | revised_slim |\n| 训练 | 从零，lr 5e-5，seed=0 | warm-start 31K，lr 3e-5，seed 20260902 |\n| val Spearman | 0.8958 | **0.9227** |\n| **test Spearman** | **0.8842** | （未跑——3,140 行密封 test 还没评测过） |\n\n所以当时的结论是：revised_slim 在 test 上 **Spearman≈0.884、R²≈0.929**，比 old_full 的 R² 高、Spearman 略低——这就是你记得的那次测试。现在 v4 的 GLOM 更强（val 0.9227），它的 test 指标随时可以在 3,140 行密封 test 集上补跑（密封性完好，从未被训练见过）。"
+      ]
+    },
+    {
+      "line": 19353,
+      "role": "assistant",
+      "timestamp": "2026-09-06T14:37:01.750Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "an **0.9227** ✓ 有效 |\n| 这个 3140 行 sealed test | ✗ 98% 被 v4 训练集覆盖，指标虚高 |\n| **hidden400**（400 行） | ✓ 对 v4 GLOM 微调数据严格未见——但 warm-start 源 31K 模型可能见过（已知泄漏警示） |\n\n### 四、论文建议\n\nGLOM 的泛化性能如实引用：**val Spearman 0.9227（严格隔离）**；历史从零版 test 0.8842 可作旧版对比。如果审稿要求\"当前 GLOM 的独立 test\"，最干净的选项是等 40 步骤揭封后用 hidden400 报 GLOM 在其上的指标（并注明 warm-start 源泄漏 caveat）。\n\n评测文件已存：`[[benchmark_cloud.tar/benchmark_cloud_bundle/project/artifacts/glom_current/sealed_test_evaluation.json`（含完整 overlap 警示）。"
+      ]
+    },
+    {
+      "line": 19419,
+      "role": "assistant",
+      "timestamp": "2026-09-06T14:42:09.381Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        " | 19,925 条，80/10/10 | test（1,993 行） | 0.8842 |\n| 历史 routeB revised_slim（从零） | 同上 | val（1,992 行） | 0.8958 |\n| **v4 最新**（warm-start 31K 微调） | 30,734 条，90/10 严格 | val（3,078 行） | **0.9227** |\n\n### 说明\n\n- 31K 模型那次是 **80/20 随机划分**（`train_pplu_full_model.py` 里 `np.random.permutation` + 0.8），没有独立 test 集——val 就是它的\"3万条上\"的评测口径\n- v4 这次用了严格分层划分（hidden400/800/300 分离）+ warm-start，val 从 0.9009 提升到 0.9227\n- 之前那张 old_full vs revised_slim 的 1993 行 test 表是中间期（19,925 行时期）的，不是 31K——你记得没错\n\n所以论文里的 GLOM 进化线：**0.9009（31K, val）→ 0.9227（v4 warm-start, val）**，两个 val 口径划分不同但规模都是 ~3 万条 pplu。"
+      ]
+    },
+    {
+      "line": 19442,
+      "role": "assistant",
+      "timestamp": "2026-09-06T14:43:30.460Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "rman 0.9227**、R² 0.9565、rmse 0.1076、mae 0.0541 | 438B |\n| `training_history.csv` | 40 个 epoch 完整训练曲线（epoch 1 即 0.9182 = warm-start 证据） | 5.8KB |\n| `validation_predictions.csv` | **3,078 行 val 预测明细**（row_id、序列、真实亮度、预测亮度） | 813KB |\n| `sealed_test_evaluation.json` | 3140 行密封 test 评测（含 98% 重叠泄漏警示） | 892B |\n| `glom_train.csv` | 训练集 27,656 行 | 9.4MB |\n| `glom_val.csv` | 验证集 3,078 行 | 1MB |\n| `glom_high_800.csv` | 高亮 800 子集 | 271KB |\n| `tgito_tune_300.csv` | TG-ITO 调参 300 子集 | 102KB |\n| `hidden_top1500_400_with_labels.csv` | **密封 hidden400**（400 行带标签） | 136KB |\n| `test_with_labels.csv` | 密封预测 test（3,140 行带标签） | 1MB |\n\n### 最新 GLOM 的核心数字（论文直接可用）\n\n```\n训练：27,656 行（warm-start 自 best_model_pplu_31k.pt，lr 3e-5，40 epochs）\n验证：3,078 行 → Spearman 0.9227 / Pearson 0.9789 / R² 0.9565 / RMSE 0.1076\n模型：best_model_pplu_current_split.pt（y_mean=3.8599, y_std=0.5179, seed=20260902）\n```\n\n模型权重文件本身（24.7MB）还在解压目录 `[[benchmark_cloud.tar\\benchmark_cloud_bundle\\project\\artifacts\\glom_curr"
+      ]
+    },
+    {
+      "line": 19462,
+      "role": "assistant",
+      "timestamp": "2026-09-07T08:21:07.470Z",
+      "terms": [
+        "FROZEN_TGITO_PARAMS"
+      ],
+      "excerpts": [
+        "artifacts\\tgito_hpo\\`（trials.csv、study.sqlite3、confirmation.json、confirmation/ 全日志）\n- 冻结结果：`project\\artifacts\\tgito_hpo\\FROZEN_TGITO_PARAMS.json`\n\n### 两个包里也有\n\n- `benchmark_cloud.tar.gz`：`benchmark_cloud_bundle/project/tuning/`（同上述结构）\n- `pplu_v4_code_only.tar.gz`：`pplu_baseline_repro_2026_09/tuning/`（纯代码版）\n\n⚠️ 注意：你新整理的 `TGITO_RESULTS_COMPLETE_20260906.tar.gz` 里**没有 tuning/ 目录**（刚才验证过），如果要用那个包做存档，建议把 tuning 这 3 个文件补进去。"
+      ]
+    },
+    {
+      "line": 19629,
+      "role": "assistant",
+      "timestamp": "2026-10-13T07:38:23.792Z",
+      "terms": [
+        "warm-start"
+      ],
+      "excerpts": [
+        "ch 10（存档点） |\n| val_token_acc | 0.9745 | epoch 5 |\n| val_ce（最低） | 0.0664 | epoch 5 |\n\n**训练特征**：epoch 1 就达到 cosine 0.9819（warm-start 证据，与 metrics 里 loaded=51 相符）→ epoch 10 峰值 0.9822 → 之后缓慢过拟合（到 epoch 80 val_ce 从 0.066 涨到 0.142），所以 best 停在 epoch 10。\n\n### 二、任务本质\n\nBridge = **ESM2 序列嵌入 → SaProt 结构特征** 的桥接模块：\n\n```\n架构（bridge_model.py）: ESM2To3DiProjector\n  input_dim → 512(hidden) → TransformerEncoder(8 head, ffn×4)\n  ├─ token_head: 512 → vocab（预测 3Di 结构 token）\n  └─ bridge 头: [input + struct + hidden] → 1024 → saprot_dim（软结构嵌入）\n损失: masked_ce + λ·cosine + λ·smoothness（total_e2s_loss）\n```\n\n作用：给下游 GLOM 提供\"没有真实结构时的 SaProt 近似结构特征\"。\n\n### 三、checkpoint 位置与最终版本\n\n| 文件 | 位置 | md5 |\n|---|---|---|\n| 训练产出（best_model.pt） | `D:\\gfpdata\\modal_output\\bridge_custom\\best_model.pt` | `71e95694...` |\n| **最终使用的版本** | `D:\\桌面\\GFP\\LL_GF\\cloud_data\\warm_best_model.pt` | `8848bda3...` |\n| 云端包里的副本 | `[[benchmark_cloud.tar\\...\\assets\\warm_best_model.pt` | `8848bda3...` ✓ 与最终版一致 |\n\n（两个文件 md5 不同 "
+      ]
+    }
+  ]
+}

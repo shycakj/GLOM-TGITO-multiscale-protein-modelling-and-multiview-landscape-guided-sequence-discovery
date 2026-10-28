@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "preflights": [
+    {
+      "id": "WT",
+      "rep": 99,
+      "mean_temperature_K": 299.99680152228433,
+      "ns_per_day": 461.89829117911444
+    },
+    {
+      "id": "C01",
+      "rep": 99,
+      "mean_temperature_K": 300.5782134731295,
+      "ns_per_day": 468.52849316850563
+    },
+    {
+      "id": "S0054",
+      "rep": 98,
+      "mean_temperature_K": 300.4623798477589,
+      "ns_per_day": 219.46758904764104
+    },
+    {
+      "id": "S2175",
+      "rep": 98,
+      "mean_temperature_K": 300.3557306655145,
+      "ns_per_day": 207.22950131958834
+    },
+    {
+      "id": "C02",
+      "rep": 98,
+      "mean_temperature_K": 299.97809827385237,
+      "ns_per_day": 138.8207899123001
+    },
+    {
+      "id": "C03",
+      "rep": 98,
+      "mean_temperature_K": 300.39102247892407,
+      "ns_per_day": 159.95084860098902
+    }
+  ],
+  "stable_structural_analysis": [
+    "WT",
+    "C01"
+  ],
+  "decision": "one MD process per GPU; two processes per GPU reduced aggregate throughput",
+  "formal_replicates": 3,
+  "production_ns": 3,
+  "equilibration_ns": 0.5,
+  "total_production_ns": 504,
+  "fixed_scope": "all 30 frozen candidates, all 25 unique starts, WT; no selection using downstream scores",
+  "parameterized_systems": 56,
+  "wet_assay_results_used": false
+}

@@ -1,0 +1,12 @@
+{
+  "stage": "3di",
+  "rows": 31480,
+  "sequence_sha256": "1d632fda53d229cb28dfc98608a190883c196982c5189831e4b3aa475a1acc5b",
+  "protocol_sha256": "964b37948b2a5299092784178648df4c73e39eaba6121485fb7ac55209065111",
+  "labels_read": false,
+  "bridge_sha256": "1dcc0d4031184d300c3fd1f8e0fd956626947fd81d71f65265c4474b5bcbb292",
+  "completed_rows": 31480,
+  "batch_size": 64,
+  "elapsed_seconds": 91.95586458500475,
+  "max_reserved_gib": 1.85546875
+}

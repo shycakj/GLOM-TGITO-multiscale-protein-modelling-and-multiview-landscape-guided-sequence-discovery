@@ -1,0 +1,8 @@
+{
+  "risk_error_spearman": 0.13053206903197948,
+  "n": 3143,
+  "overprediction_failure_definition": "pred >= 4.2 and true < 4.2",
+  "failure_prevalence": 0.10117721921730831,
+  "failure_auroc": 0.536178549563088,
+  "failure_auprc": 0.10071892386194187
+}
