@@ -1,5 +1,5 @@
 {
-  "release_tag": "repro-v2026.10.28",
+  "release_tag": "repro-v2026.10.29",
   "repository": "shycakj/GLOM-TGITO-multiscale-protein-modelling-and-multiview-landscape-guided-sequence-discovery",
   "groups": {
     "data": {
@@ -18441,10 +18441,10 @@
       "url": "https://github.com/shycakj/GLOM-TGITO-multiscale-protein-modelling-and-multiview-landscape-guided-sequence-discovery/releases/download/repro-v2026.10.28/glom_tgito_terrain_20261028.zip"
     },
     "figures": {
-      "filename": "glom_tgito_figures_20261028.zip",
-      "bytes": 94095464,
-      "sha256": "6aa010a6260ac932a3949a58dff6d2a4318fdbdf57af9b742647d87d626a3f59",
-      "expanded_bytes": 125368548,
+      "filename": "glom_tgito_figures_20261029.zip",
+      "bytes": 94096270,
+      "sha256": "4792880e716da422546f0cca8a762313316c795ade319aff4ddcdf44c1194fa4",
+      "expanded_bytes": 125371067,
       "files": {
         "paper/figure_edit_plan.json": {
           "bytes": 6196,
@@ -20995,8 +20995,8 @@
           "sha256": "1ee7f8eca8c7b0961fbc3101f9795ca34db3e1723fcea6eaa0e9edb0df3661ad"
         },
         "paper/latex/bioinformatics/main.tex": {
-          "bytes": 40643,
-          "sha256": "116ecf4535b945cf55bf36251b780aac330e00cd1a37eeef606543a71dc55923"
+          "bytes": 43046,
+          "sha256": "8109ade0a1ae66a47e32ea8ad6b91aaa854ddf0a0800156315fc0fed25589b9f"
         },
         "paper/latex/bioinformatics/manuscript-common.sty": {
           "bytes": 4072,
@@ -21079,8 +21079,8 @@
           "sha256": "e8f4a788fb94f1c03f60eedf7c74a8061154175ec078a064fe3dfdb078fdbcc5"
         },
         "paper/latex/supplement/main.tex": {
-          "bytes": 154128,
-          "sha256": "1333eb14778015e5d34c3d7f3cf97c09882ed15811e7a49ce380c84e1e4bb834"
+          "bytes": 154244,
+          "sha256": "120ba5bc294e0686744e96014ab6e27e2f2036a89d58d8d4731390e01dd064ef"
         },
         "paper/latex/supplement/manuscript-common.sty": {
           "bytes": 2032,
@@ -24051,7 +24051,7 @@
           "sha256": "483a88211dbfc3c3ff357460b27bc13e2ccebca9512e0e15c4617f6eb845830f"
         }
       },
-      "url": "https://github.com/shycakj/GLOM-TGITO-multiscale-protein-modelling-and-multiview-landscape-guided-sequence-discovery/releases/download/repro-v2026.10.28/glom_tgito_figures_20261028.zip"
+      "url": "https://github.com/shycakj/GLOM-TGITO-multiscale-protein-modelling-and-multiview-landscape-guided-sequence-discovery/releases/download/repro-v2026.10.29/glom_tgito_figures_20261029.zip"
     }
   }
 }

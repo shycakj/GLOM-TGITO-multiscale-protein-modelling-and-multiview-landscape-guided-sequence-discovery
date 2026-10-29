@@ -6,7 +6,11 @@ GLOM–TGITO combines a multiscale fluorescence predictor with sequence optimiza
 
 This repository provides the code, fitted weights, fixed data partitions, random seeds and configurations used in the paper. Large assets are downloaded separately; a normal clone does not include public language-model weights or molecular-dynamics trajectories.
 
-[中文复现指南](README_zh.md) · [Experiment instructions](docs/REPRODUCING.md) · [Data sources](docs/DATA.md) · [Downloadable assets](../../releases/tag/repro-v2026.10.28)
+[中文复现指南](README_zh.md) · [Experiment instructions](docs/REPRODUCING.md) · [Data sources](docs/DATA.md) · [Current release](../../releases/tag/repro-v2026.10.29)
+
+The 2026-10-29 release synchronizes the manuscript and LaTeX with the journal submission and adds an explicit MIT license for the original software. Numerical experiment assets remain identical to the 2026-10-28 release. `reproduce.py fetch` uses the versioned URLs and SHA256 checksums in `manifests/ASSETS.json`.
+
+The versioned code, fitted weights, data partitions, results and manuscript sources are archived together at [Zenodo, doi:10.5281/zenodo.23725684](https://doi.org/10.5281/zenodo.23725684). Download the asset ZIPs beside the source ZIP to reproduce from the archive without relying on GitHub downloads.
 
 ## Start here
 
@@ -94,4 +98,4 @@ The primary discovery campaign uses **900 peak regions, 2,700 search tasks and 1
 
 The fluorescence data originate from Gonzalez Somermeyer et al., *Heterogeneity of the GFP fitness landscape and data-driven protein design*, eLife 11:e75842 (2022), [doi:10.7554/eLife.75842](https://doi.org/10.7554/eLife.75842). The pinned source download and the exact input-file hashes are documented in [Data sources](docs/DATA.md).
 
-For this project, use [CITATION.cff](CITATION.cff). Third-party source and model notices are described in [NOTICE.md](NOTICE.md).
+For this project, use [CITATION.cff](CITATION.cff). The original software is available under the [MIT License](LICENSE); third-party source, data and model terms are described in [NOTICE.md](NOTICE.md).

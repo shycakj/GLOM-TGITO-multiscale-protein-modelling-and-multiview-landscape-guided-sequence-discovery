@@ -2,8 +2,10 @@ cff-version: 1.2.0
 message: "Please cite this software and the accompanying GLOM–TGITO manuscript."
 type: software
 title: "GLOM–TGITO: multiscale protein modelling and multiview landscape-guided sequence discovery"
-version: "2026.10.28"
-date-released: "2026-10-28"
+version: "2026.10.29"
+date-released: "2026-10-29"
+license: MIT
+doi: "10.5281/zenodo.23725684"
 repository-code: "https://github.com/shycakj/GLOM-TGITO-multiscale-protein-modelling-and-multiview-landscape-guided-sequence-discovery"
 authors:
   - family-names: Xiong

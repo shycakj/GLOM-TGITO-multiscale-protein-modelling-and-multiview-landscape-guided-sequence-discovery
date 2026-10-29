@@ -8,20 +8,24 @@
     "sha256": "133cfde33f3cc09dee39594986779faaf3b4d00f2227066f639edd514dd0b5bb"
   },
   "CITATION.cff": {
-    "bytes": 706,
-    "sha256": "b31aa37be874953e15f6f480920c7f9b88eed46c0628f287c18e1723eefb14f0"
+    "bytes": 750,
+    "sha256": "ebe72f69ea0340d638b7ac5d9c0d2326c93d35e0bc5816db0d5160fcbc3be3f1"
+  },
+  "LICENSE": {
+    "bytes": 1080,
+    "sha256": "fd09ea6b4aeade9426f6cdd33ad69cab7e0757bbec95d61dcc423503f07e084d"
   },
   "NOTICE.md": {
-    "bytes": 1013,
-    "sha256": "5e04d03b7eda7c0173923b8d2cafa46ec083f00e938995290abfe36b7a79542f"
+    "bytes": 1469,
+    "sha256": "f98c9ea2a6cbc82602d22f03c21a6718c341eae81a9049bb636693ff8e8948c1"
   },
   "README.md": {
-    "bytes": 6128,
-    "sha256": "0944ef06a80e9e4afe2d1f641cf3928897898acfa57f25c9b669d493f57ef358"
+    "bytes": 6816,
+    "sha256": "5bf579203a46dcf03d341184fbd6f5116471b0b6a9629135ed61930e42517de0"
   },
   "README_zh.md": {
-    "bytes": 3197,
-    "sha256": "9845dc1c8afc21fddb4462f6a060ee7e0851357d9b5132038677397148ae706d"
+    "bytes": 3545,
+    "sha256": "a42f3a497e35ea1427d30dffe9e2c10365394fa188fbbc733263f485a53563b9"
   },
   "assets/glom_tgito_data_20261028.zip": {
     "bytes": 9107345,
@@ -2721,7 +2725,7 @@
   },
   "manifests/ASSETS.json": {
     "bytes": 1308586,
-    "sha256": "e1d2e084f50e668ba34f802197c40dc315fe02f714cec3c2697a6b54b0b02b79"
+    "sha256": "879f71218c17bc172e93ed367530afb27a12c43efc5de25291be4fd8646183ae"
   },
   "manifests/DATA_SOURCES.json": {
     "bytes": 1351,

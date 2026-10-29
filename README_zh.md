@@ -65,3 +65,5 @@ python reproduce.py fetch --list
 `weights` 为关键权重；`terrain` 为正式搜索的冻结地势库；`baseline_weights` 为其余已训练基线与消融权重；`results` 为数值复算材料；`figures` 为绘图与 LaTeX；`md_inputs` 为准备好的结构和模拟输入。分子动力学轨迹无需下载，也不会上传至本仓库。
 
 数据来源、原始下载地址、标签定义和固定划分见 [docs/DATA.md](docs/DATA.md)。请使用归档的行号和划分，不要重新随机划分后与论文数值直接比较。
+
+2026-10-29 版本将论文与 LaTeX 同步至投稿定稿，并为原创软件补充 [MIT 许可证](LICENSE)。实验数值、数据划分和模型权重沿用已核验的 2026-10-28 版本；下载脚本按清单获取各版本资产并校验 SHA256。第三方代码、数据、模型及论文文件的许可范围见 [NOTICE.md](NOTICE.md)。
