@@ -67,3 +67,5 @@ python reproduce.py fetch --list
 数据来源、原始下载地址、标签定义和固定划分见 [docs/DATA.md](docs/DATA.md)。请使用归档的行号和划分，不要重新随机划分后与论文数值直接比较。
 
 2026-10-29 版本将论文与 LaTeX 同步至投稿定稿，并为原创软件补充 [MIT 许可证](LICENSE)。实验数值、数据划分和模型权重沿用已核验的 2026-10-28 版本；下载脚本按清单获取各版本资产并校验 SHA256。第三方代码、数据、模型及论文文件的许可范围见 [NOTICE.md](NOTICE.md)。
+
+Zenodo 归档包含代码、权重、固定划分、论文与补充数据。完整实验输出（`results`）和模拟输入（`md_inputs`）通过已固定版本的 GitHub Release 下载，使用 `reproduce.py fetch results md_inputs` 获取；完整分子动力学轨迹不包含在归档中。

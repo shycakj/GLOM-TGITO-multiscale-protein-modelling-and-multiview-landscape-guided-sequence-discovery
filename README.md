@@ -10,7 +10,7 @@ This repository provides the code, fitted weights, fixed data partitions, random
 
 The 2026-10-29 release synchronizes the manuscript and LaTeX with the journal submission and adds an explicit MIT license for the original software. Numerical experiment assets remain identical to the 2026-10-28 release. `reproduce.py fetch` uses the versioned URLs and SHA256 checksums in `manifests/ASSETS.json`.
 
-The versioned code, fitted weights, data partitions, results and manuscript sources are archived together at [Zenodo, doi:10.5281/zenodo.23725684](https://doi.org/10.5281/zenodo.23725684). Download the asset ZIPs beside the source ZIP to reproduce from the archive without relying on GitHub downloads.
+The code, fitted weights, fixed data partitions, manuscript sources and supplementary source data are archived at [Zenodo, doi:10.5281/zenodo.23725684](https://doi.org/10.5281/zenodo.23725684). Full experiment outputs (`results`) and prepared simulation inputs (`md_inputs`) remain available from the versioned GitHub Releases through `reproduce.py fetch`. The Zenodo README gives the commands for combining these files. Molecular-dynamics trajectories are not included.
 
 ## Start here
 

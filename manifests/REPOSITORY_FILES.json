@@ -8,8 +8,8 @@
     "sha256": "133cfde33f3cc09dee39594986779faaf3b4d00f2227066f639edd514dd0b5bb"
   },
   "CITATION.cff": {
-    "bytes": 750,
-    "sha256": "ebe72f69ea0340d638b7ac5d9c0d2326c93d35e0bc5816db0d5160fcbc3be3f1"
+    "bytes": 752,
+    "sha256": "c35fd634ec958e91c9e06381a39d78cf3295ebca1586bbf76789097648111dbd"
   },
   "LICENSE": {
     "bytes": 1080,
@@ -20,12 +20,12 @@
     "sha256": "f98c9ea2a6cbc82602d22f03c21a6718c341eae81a9049bb636693ff8e8948c1"
   },
   "README.md": {
-    "bytes": 6816,
-    "sha256": "5bf579203a46dcf03d341184fbd6f5116471b0b6a9629135ed61930e42517de0"
+    "bytes": 6985,
+    "sha256": "ab087c34f7311d5b03371ebc7c99663f68fcd8f23d58d765ef1a0b1bcbb03d08"
   },
   "README_zh.md": {
-    "bytes": 3545,
-    "sha256": "a42f3a497e35ea1427d30dffe9e2c10365394fa188fbbc733263f485a53563b9"
+    "bytes": 3843,
+    "sha256": "3be8484d5925c0328016a5861a10c2ca58077e9525fee5fa067b3e8f9c0b6e52"
   },
   "assets/glom_tgito_data_20261028.zip": {
     "bytes": 9107345,
