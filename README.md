@@ -2,11 +2,13 @@
 
 **Multiscale protein modelling and multiview landscape-guided sequence discovery**
 
+**Research archive:** [Zenodo · DOI: 10.5281/zenodo.23725684](https://doi.org/10.5281/zenodo.23725684)
+
 GLOM–TGITO combines a multiscale fluorescence predictor with sequence optimization across multiple learned landscapes. Frozen ESM2 features pass through a SaProt-distilled Bridge, then join mutation features in global, regional and key-site branches. TGITO uses these representations to select peak regions, guide sequence updates and rank diverse candidates by local evidence.
 
 This repository provides the code, fitted weights, fixed data partitions, random seeds and configurations used in the paper. Large assets are downloaded separately; a normal clone does not include public language-model weights or molecular-dynamics trajectories.
 
-[中文复现指南](README_zh.md) · [Experiment instructions](docs/REPRODUCING.md) · [Data sources](docs/DATA.md) · [Current release](../../releases/tag/repro-v2026.10.29)
+[中文复现指南](README_zh.md) · [Experiment instructions](docs/REPRODUCING.md) · [Data sources](docs/DATA.md) · [Current release](../../releases/tag/repro-v2026.10.29.1)
 
 The 2026-10-29 release synchronizes the manuscript and LaTeX with the journal submission and adds an explicit MIT license for the original software. Numerical experiment assets remain identical to the 2026-10-28 release. `reproduce.py fetch` uses the versioned URLs and SHA256 checksums in `manifests/ASSETS.json`.
 
